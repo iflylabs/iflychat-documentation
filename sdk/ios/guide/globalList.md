@@ -4,7 +4,6 @@ iFlyChatLibrary polls every 2 min to the server to get the updated user and room
 
 To listen to this notification and receive the updated global list, the user needs to add observer to the application and retrieve the <font color='blue'>iFlyChatRoster</font> object from the notification:
 
-    <code>
     OBJECTIVE-C
 
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(receiveGlobalList:) name:@”iFlyChat.onGlobalListUpdate” object:nil];
@@ -42,7 +41,6 @@ To listen to this notification and receive the updated global list, the user nee
             roomlist = object.getRoomList()
         }
     }
-    </code>
   
 Here, the <font color='blue'>iFlyChatRoster</font> object actually returns two <font color='blue'>iFlyChatOrderedDictionary</font> objects, one for <font color='blue'>Userlist</font> and the other for <font color='blue'>Roomlist</font>. These data structure types can be retrieved from the iFlyChatRoster object using the getter functions provided in the same. 
 
