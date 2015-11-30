@@ -14,9 +14,9 @@
 LocalBroadcastManager bManager = LocalBroadcastManager.getInstance(this);
 </code>
 
-    * Call setiFlyChatContext(Context) method of Utilities class in iFlyChatLibrary and give your application context object to this class.
+    * Call setiFlyChatContext(Context) method of iFlyChatUtilities class in iFlyChatLibrary and give your application context object to this class.
 <code>
-Utilities.setiFlyChatContext(getApplicationContext());
+iFlyChatUtilities.setiFlyChatContext(getApplicationContext());
 </code>
 
     * If Session Key is not available then, Create and initialize the iFlyChatUserSession object with your username and password.
