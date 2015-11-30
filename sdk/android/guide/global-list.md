@@ -7,6 +7,7 @@ To get a roster object from this broadcast and receive the updated global list. 
 * Match the intent action in your onReceive() method.
 
     if (intent.getAction().equals("iFlyChat.onGlobalListUpdate")) {
+    
         iFlyChatRoster roster = intent.getParcelableExtra("globalList");
         LinkedHashMap<String,iFlyChatUser> users = roster.getUserList();
         LinkedHashMap<String,iFlyChatRoom> rooms = roster.getRoomList();
@@ -17,6 +18,7 @@ To get a roster object from this broadcast and receive the updated global list. 
         for (Map.Entry<String, iFlyChatRoom> entry : rooms.entrySet()) {
             iFlyChatRoom roomObj = entry.getValue();
         }
+        
     }
 
 <br>
