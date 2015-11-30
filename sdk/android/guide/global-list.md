@@ -5,21 +5,20 @@ iFlyChatLibrary polls every 2 mins to the server to get the updated user and roo
 To get a roster object from this broadcast and receive the updated global list. The user needs to check for corresponding intent action and retrieve the iFlyChatRoster object :
 
 * Match the intent action in your onReceive() method.
-<code>
-if (intent.getAction().equals("iFlyChat.onGlobalListUpdate")) {
-    iFlyChatRoster roster = intent.getParcelableExtra("globalList");
-    LinkedHashMap<String,iFlyChatUser> users = roster.getUserList();
-    LinkedHashMap<String,iFlyChatRoom> rooms = roster.getRoomList();
 
-    for (Map.Entry<String, iFlyChatUser> entry : users.entrySet()) {
-        iFlyChatUser userObj = entry.getValue();
+    if (intent.getAction().equals("iFlyChat.onGlobalListUpdate")) {
+        iFlyChatRoster roster = intent.getParcelableExtra("globalList");
+        LinkedHashMap<String,iFlyChatUser> users = roster.getUserList();
+        LinkedHashMap<String,iFlyChatRoom> rooms = roster.getRoomList();
+        
+        for (Map.Entry<String, iFlyChatUser> entry : users.entrySet()) {
+            iFlyChatUser userObj = entry.getValue();
+        }
+        for (Map.Entry<String, iFlyChatRoom> entry : rooms.entrySet()) {
+            iFlyChatRoom roomObj = entry.getValue();
+        }
     }
 
-    for (Map.Entry<String, iFlyChatRoom> entry : rooms.entrySet()) {
-        iFlyChatRoom roomObj = entry.getValue();
-    }
-}
-</code>
 <br>
 
 You can get updated roster object from which you can get updated users and rooms LinkedHashMap by calling corresponding getter methods. You can get a single user and a room object from the users and rooms LinkedHashMap objects by running a for loop and doing getValue().
