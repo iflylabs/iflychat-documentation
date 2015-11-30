@@ -1,38 +1,40 @@
 #Installation & Setup#
 
-1. Copy the <font color='blue'>iFlyChatLibrary.framework</font> file from the above link to your project. To do this, you just need to drag and drop the file to your project.
+1. Copy the `iFlyChatLibrary.framework` file from the above link to your project. To do this, you just need to drag and drop the file to your project.
 
 
-    ![Add iFlyChat Framework file](https://lh5.googleusercontent.com/-6es2W67Wf7k/VgEhAewx7HI/AAAAAAAAA0w/mLWhUWTPfDw/w804-h540-no/Adding%2BiFlyChatLibrary%2BFramework%2Bfile.gif)
+    ![Add iFlyChat Framework file](https://iflychat-website-iflylabs.netdna-ssl.com/sites/default/files/docs/sdk/ios/adding-iFlyChatLibrary-framework-file.gif)
 
 
-2. Add <font color='blue'>libicucore.tbd</font> file to your project.
+2. Add `libicucore.tbd` file to your project.
     * Go to your application's target.
-    * Go to <font color='blue'>"General"</font> tab.
-    * Under <font color='blue'>"Linked frameworks and libraries"</font> add the above libraries using the plus button.
+    * Go to `"General"` tab.
+    * Under `"Linked frameworks and libraries"` add the above libraries using the plus button.
 
-    ![Add libicucore.tbd file to project](https://lh3.googleusercontent.com/-Jf1cnedJjIA/VgEhAYg_ltI/AAAAAAAAA0w/K0shr0R0Gyc/w804-h540-no/Adding%2BLibrary%2Bto%2BiFlyChat%2BExample%2BApplication.gif)  
+    ![Add libicucore.tbd file to project](https://iflychat-website-iflylabs.netdna-ssl.com/sites/default/files/docs/sdk/ios/adding-library-to-iFlyChat-example-application.gif)  
   
-3. Import the <font color='blue'>“iFlyChatLibrary/iFlyChatlibrary.h”</font> file wherever you want to use the chat service functions.
+3. Import the `“iFlyChatLibrary/iFlyChatlibrary.h”` file wherever you want to use the chat service functions.
 
-    <code>
-    #import "iFlyChatLibrary/iFlyChatLibrary.h"</code>  
+    ```obj-c
+    #import "iFlyChatLibrary/iFlyChatLibrary.h"
+    ```
+    
     Note: In a Swift iOS project, one will need to create an Objective-C bridging header to be able to import the framework's header file.
 
-       * Create an Objective-C header file in your project and import the <font color='blue'>iFlyChatLibrary.h</font> file there.
+       * Create an Objective-C header file in your project and import the `iFlyChatLibrary.h` file there.
 
 
-       * Add the relative path of this header file in the <font color='blue'>"Build Settings"</font> of your project's target under <font color='blue'>Objective-C Bridging Header</font> option.
+       * Add the relative path of this header file in the `"Build Settings"` of your project's target under `Objective-C Bridging Header` option.
 
-           ![Adding relative path to build settings](https://lh3.googleusercontent.com/-4B-7-ONrNs8/VgEizogwXzI/AAAAAAAAA1M/trXPn3kHlVk/w804-h540-no/Adding%2BBridging%2BHeader%2BSetting.gif)
+           ![Adding relative path to build settings](https://iflychat-website-iflylabs.netdna-ssl.com/sites/default/files/docs/sdk/ios/adding-bridging-header-setting.gif)
 
 ##Precautions to be taken.
 
-1. Make sure that in your application target's <font color='blue'>Build Settings</font>, under <font color='blue'>"Framework Search Path"</font>, the framework's path is mentioned. To avoid any problem, it is recommended to copy the framework file while linking.
+1. Make sure that in your application target's `Build Settings`, under `"Framework Search Path"`, the framework's path is mentioned. To avoid any problem, it is recommended to copy the framework file while linking.
 
-2. iOS 9's <font color='blue'>App Transport Security</font> does not allow for "http" connections. To work around it, you may add an exception in the <font color='blue'>Info.plist</font> file in the main <dict> tag like so:
+2. iOS 9's `App Transport Security` does not allow for "http" connections. To work around it, you may add an exception in the `Info.plist` file in the main <dict> tag like so:
 
-    <code>
+    ```xml
     <key>NSAppTransportSecurity&lt;/key>  
     <dict>  
           <key>NSAllowsArbitraryLoads</key>  
@@ -50,14 +52,15 @@
                 </dict>  
            </dict>  
     </dict>  
-    
+    ```
 
     or if you need to allow all "http" connections, you may write the following code:
 
+    ```xml
     <key>NSAppTransportSecurity&lt;/key>  
          <dict>  
               <key>NSAllowsArbitraryLoads</key><true/>  
          </dict>
-    </code>  
+    ```
   
-3. Set <font color='blue'>"ENABLE_BITCODE"</font> to NO in Application target's <font color='blue'>Build Settings</font> when testing on a device.
+3. Set `"ENABLE_BITCODE"` to NO in Application target's `Build Settings` when testing on a device.

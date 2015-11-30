@@ -1,12 +1,13 @@
 #Debugging  
-If the user needs to debug while making his/her own application, then the debug flag can be set to true from the <font color='blue'>Utilities</font> class.
-    <code>
-    OBJECTIVE-C
+If the user needs to debug while making his/her own application, then the debug flag can be set to true from the `Utilities` class.
 
-    [Utilities setIsDebug:YES];
+```obj-c
+//OBJECTIVE-C
 
+[Utilities setIsDebug:YES];
+```
+```swift
+//SWIFT
 
-    SWIFT
-
-    Utilities.setIsDebug(true)
-    </code>
+Utilities.setIsDebug(true)
+```
