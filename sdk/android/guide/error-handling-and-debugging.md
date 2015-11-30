@@ -4,12 +4,12 @@ Whenever an error occurs while executing a method from iFlyChatLibrary SDK, an i
 
 To listen to this broadcast and receive the event `iFlyChat.onError`, the user needs to match the intent action in the application's `onReceive()` method. To retrieve the `iFlyChatError` object, the user needs to create and initialize the Bundle type object `bundleData` and then the user can get `iFlyChatError` object by calling `getParceleable("error")` method on `bundleData` a Bundle type object :
 ```
-    if(intent.getAction().equals("iFlyChat.onError")){
-        Bundle bundleData = intent.getExtras();
-        iFlyChatError error = bundleData.getParcelable("error");
-        Log.e("iFlyChat.onError","Error code is: " + error.getCode() + " with message: " 
-        + error.getMessage() + " and source: " + error.getSource());
-    }
+if(intent.getAction().equals("iFlyChat.onError")){
+    Bundle bundleData = intent.getExtras();
+    iFlyChatError error = bundleData.getParcelable("error");
+    Log.e("iFlyChat.onError","Error code is: " + error.getCode() + " with message: " 
+    + error.getMessage() + " and source: " + error.getSource());
+}
 ```
 <br>
 
