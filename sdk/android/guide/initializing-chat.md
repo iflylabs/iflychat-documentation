@@ -5,29 +5,29 @@
 To start the chat, we need to initialize the activity. In your activity’s onCreate() method :
 
 * Create and Initialize a LocalBroadcastManager object.
-<code>
-LocalBroadcastManager bManager = LocalBroadcastManager.getInstance(this);
-</code>
+```
+    LocalBroadcastManager bManager = LocalBroadcastManager.getInstance(this);
+```
 <br>
 Create the LocalBroadcastManager object outside onCreate() method. It will make it accessible throughout the activity. Also it will be useful in unregistering receivers in onStop() method. Initialize bManager object with the current activity instance in onCreate() method.
 
 
 * Call setiFlyChatContext(Context) method of iFlyChatUtilities class in iFlyChatLibrary and give your application context object to this class.
-<code>
-iFlyChatUtilities.setiFlyChatContext(getApplicationContext());
-</code>
+```
+    iFlyChatUtilities.setiFlyChatContext(getApplicationContext());
+```
 <br>
 
 * If Session Key is not available then, create and initialize the iFlyChatUserSession object with your username and password.
-<code>
-iFlyChatUserSession userSession = new iFlyChatUserSession("your_username", "your_password");
-</code>
+```
+    iFlyChatUserSession userSession = new iFlyChatUserSession("your_username", "your_password");
+```
 <br>
 
 * If Session Key is available then, create and initialize the iFlyChatUserSession object with your username, password and sessionKey.
-<code>
-iFlyChatUserSession userSession = new iFlyChatUserSession("your_username", "your_password", “your_sessionKey”);
-</code>
+```
+    iFlyChatUserSession userSession = new iFlyChatUserSession("your_username", "your_password", “your_sessionKey”);
+```
 <br>
 
 UserName and userPassword are the two sufficient parameters required by iFlyChat to authenticate the user and get the session key from the server. These parameters are to be taken from the user through the user interface.
@@ -37,9 +37,9 @@ The sessionKey is a unique key that iFlyChat server generates for every user tha
 <br>
 
 * Create and initialize the iFlyChatConfig object. Use the serverHost and authUrl provided by iFlyChat.
-<code>
-iFlyChatConfig config = new iFlyChatConfig(serverHost, authUrl, isHttps);
-</code>
+```
+    iFlyChatConfig config = new iFlyChatConfig(serverHost, authUrl, isHttps);
+```
 <br>
 
 serverHost is the URL string provided to the user by iFlyChat when the user signs up for the service. This is the key element through which the client connects to the iFlyChat server.
@@ -50,18 +50,18 @@ isHttps is a boolean variable which tells iFlyChat whether your chat connection 
 
 <br>
 * Set the "AutoReconnect"" parameter of the iFlyChatConfig object to whatever(true or false) to you want to. Default is true.
-<code>
-config.setAutoReconnect(true);
-</code>
+```
+    config.setAutoReconnect(true);
+```
 <br>
 
 This boolean value is set after iFlyChatConfig object is created. By default it is set to true. This value specifies whether the client should attempt a reconnect in case the connection is broken if an invalid session key is supplied while creating iFlyChatUserSession object or due to some network or server error.
 
 <br>
 * Create and initialize the iFlyChatUserAuthService object.
-<code>
+```
 iFlyChatUserAuthService authService = new iFlyChatUserAuthService(config, userSession);
-</code>
+```
 <br>
 
 The object of this class stores the iFlyChatConfig and iFlyChatUserSession objects created above at one place. Therefore, it is necessary to create those objects first before creating an object for this class.
@@ -73,9 +73,9 @@ After getting the session key, it sends a Broadcast intent with action "iFlyChat
 <br>
 
 * Get sessionKey from userSession object.
-<code>
-String sessionKey = userSession.getSessionKey();
-</code>
+```
+    String sessionKey = userSession.getSessionKey();
+```
 <br>
 
 Get session key from calling getSessionKey() method and store in a string sessionKey. This will be used below in calling connectChat(sessionKey) method of iFlyChatService object.
@@ -83,9 +83,9 @@ Get session key from calling getSessionKey() method and store in a string sessio
 <br>
 
 * Create and initialize the iFlyChatService object.
-<code>
-iFlyChatService service = new iFlyChatService(userSession, config, authService);
-</code>
+```
+    iFlyChatService service = new iFlyChatService(userSession, config, authService);
+```
 <br>
 
 The object of this class performs all the core functions of iFlyChat. While initializing it requires iFlyChatConfig, iFlyChatUserSession and iFlyChatUserAuthService objects created above. Therefore, it is necessary to create those objects first before creating the object for this class.
@@ -93,9 +93,9 @@ The object of this class performs all the core functions of iFlyChat. While init
 <br>
 
 * Connect the chat using sessionKey.
-<code>
-service.connectChat(sessionKey);
-</code>
+```
+    service.connectChat(sessionKey);
+```
 <br>
 
 This function initiates the process of connecting the client to iflychat chat servers. It checks for the session key validity while connecting and if it is invalid and auto reconnect (see above: iFlyChatConfig) value is set to "YES", then it automatically retrieves a new session key from the server and connects the chat.
@@ -104,7 +104,7 @@ This function initiates the process of connecting the client to iflychat chat se
 
 * Create and initialize your receiver object and call onReceive() method in your activity.
 
-<code>
+```
 private BroadcastReceiver bReceiver = new BroadcastReceiver() 
 {
     @Override
@@ -112,7 +112,7 @@ private BroadcastReceiver bReceiver = new BroadcastReceiver()
     {
     }
 };
-</code>
+```
 <br>
 
 Whenever some message comes from the server. The iFlyChatService class will get the data first. It will define a intent with corresponding intent action and sendBroadcast with a string/object. To receive events from a server in your activity BroadcastManager object will be used.
@@ -126,9 +126,9 @@ onReceive() method will be used to match the intent actions(defined in onStart()
 In your activity’s onStart() method :
 
 * Create and Initialize a IntentFilter object.
-<code>
-IntentFilter intentFilter = new IntentFilter();
-</code>
+```
+    IntentFilter intentFilter = new IntentFilter();
+```
 <br>
 
 The intentFilter object of the IntentFilter type is used to register the intentFilter with BroadcastManager object.
@@ -136,7 +136,7 @@ The intentFilter object of the IntentFilter type is used to register the intentF
 <br>
 
 * Depending on the events you want to listen, you can add actions to your intent filter in onStart() method. Following are all the actions you can listen to:
-<code>
+```
 intentFilter.addAction("iFlyChat.onUserSessionAuthSuccess");
 intentFilter.addAction("iFlyChat.onChatConnect");
 intentFilter.addAction("iFlyChat.onGetSessionKey");
@@ -154,7 +154,7 @@ intentFilter.addAction("iFlyChat.onUserThreadHistory");
 intentFilter.addAction("iFlyChat.onRoomThreadHistory");
 intentFilter.addAction("iFlyChat.onUploadProgress");
 intentFilter.addAction("iFlyChat.onError");
-</code>
+```
 <br>
 
 In your activity you need to add actions in your IntentFilter object to distinguish these intents based on their intent actions. These intent actions are explained further in this document.
@@ -162,9 +162,9 @@ In your activity you need to add actions in your IntentFilter object to distingu
 <br>
 
 * Register receiver to listen all the broadcast send by service class.
-<code>
-object.bManager.registerReceiver(bReceiver, intentFilter);
-</code>
+```
+    object.bManager.registerReceiver(bReceiver, intentFilter);
+```
 <br>
 
 To listen events, register a receiver with the above bReceiver object of BroadcastReceiver type and IntentFilter object (intentFilter) to your BroadcastManager object(bManager). 
@@ -174,12 +174,12 @@ To listen events, register a receiver with the above bReceiver object of Broadca
 To get session key on event(iFlyChat.onUserSessionAuthSuccess)
 
 * Match the intent action in your onReceive() method. Then do getString("sessionKey") on Bundle type object(bundleData).
-<code>
+```
 if (intent.getAction().equals("iFlyChat.onUserSessionAuthSuccess")) {
     Bundle bundleData = intent.getExtras();
     String sessionKey = bundleData.getString("sessionKey");
 }
-</code>
+```
 <br>
 
 This intent action (iFlyChat.onUserSessionAuthSuccess) is added to the intent, when your user is validated on the iFlyChat server. Then a new session Key is broadcasted from iFlyChatUserAuthService class. You can use this session key in the next login of the user to create and initialize the iFlyChatUserSession object with your username, password and sessionKey.
@@ -189,36 +189,36 @@ This intent action (iFlyChat.onUserSessionAuthSuccess) is added to the intent, w
 To get a current user object on event(iFlyChat.onChatConnect)
 
 * Match the intent action in your onReceive() method. Then do intent.getParcelableExtra("currentUser") and save the result in iFlyChatUser object.
-<code>
+```
 if (intent.getAction().equals("iFlyChat.onChatConnect")) {
     iFlyChatUser currentUser = intent.getParcelableExtra("currentUser");
 }
-</code>
+```
 <br>
 
 The above iFlyChatUser object (currentUser) is your apps, currently login user with authentication. There are several getter methods which gives you some properties of the current user. Which you can use to show in the UI. These getter methods are explained in the javadoc of the iFlyChatLibrary.
 
 **Example:**
 
-<code>
+```
 Toast.makeText(context, "onChatConnect: "+currentUser.getId() + " " + currentUser.getName() + " " + currentUser.getRole()
                 + " " + currentUser.getStatus() + " " + currentUser.getAvatarUrl() + " " + currentUser.getProfileUrl(),
         Toast.LENGTH_LONG).show();
-</code>
+```
 <br>
 
 **Disconnection**
 
 Unregister your broadcast Receiver in the onStop() method of your activity.
 
-<code>
+```
 @Override
 protected void onStop() 
 {
     super.onStop();
     bManager.unregisterReceiver(bReceiver);
 }
-</code>
+```
 <br>
 
 To disconnect the chat, the user first needs to unregister all the receivers attached to BroadcastManager object(bManager) in onStop() method of the activity. 
@@ -226,14 +226,14 @@ To disconnect the chat, the user first needs to unregister all the receivers att
 <br>
 
 User needs to call the following function of the iFlyChatService object.
-<code>
+```
 @Override
 protected void onDestroy()
 {
     service.disconnectChat();
     super.onDestroy();
 }
-</code>
+```
 <br>
 
 Disconnect chat whenever the application is terminated. This can be done in your activity’s onDestroy() method by calling disconnectChat() method of service object. Do not call this method if you are 
