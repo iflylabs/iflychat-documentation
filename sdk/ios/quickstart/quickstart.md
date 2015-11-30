@@ -11,7 +11,7 @@
     * Go to `"General"` tab.
     * Under `"Linked frameworks and libraries"` add the above libraries using the plus button.
 
-    ![Add libicucore.tbd file to project](https://iflychat-website-iflylabs.netdna-ssl.com/sites/default/files/docs/sdk/ios/adding-library-to-iFlyChat-example-application_0.gif =500x)  
+    ![Add libicucore.tbd file to project](https://iflychat-website-iflylabs.netdna-ssl.com/sites/default/files/docs/sdk/ios/adding-library-to-iFlyChat-example-application_0.gif =500*)  
   
 3. Import the `“iFlyChatLibrary/iFlyChatlibrary.h”` file wherever you want to use the chat service functions.
 
