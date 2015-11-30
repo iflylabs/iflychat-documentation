@@ -12,9 +12,9 @@ LocalBroadcastManager bManager = LocalBroadcastManager.getInstance(this);
 Create the LocalBroadcastManager object outside onCreate() method. It will make it accessible throughout the activity. Also it will be useful in unregistering receivers in onStop() method. Initialize bManager object with the current activity instance in onCreate() method.
 
 
-* Call setiFlyChatContext(Context) method of Utilities class in iFlyChatLibrary and give your application context object to this class.
+* Call setiFlyChatContext(Context) method of iFlyChatUtilities class in iFlyChatLibrary and give your application context object to this class.
 <code>
-Utilities.setiFlyChatContext(getApplicationContext());
+iFlyChatUtilities.setiFlyChatContext(getApplicationContext());
 </code>
 <br>
 
@@ -139,6 +139,7 @@ The intentFilter object of the IntentFilter type is used to register the intentF
 <code>
 intentFilter.addAction("iFlyChat.onUserSessionAuthSuccess");
 intentFilter.addAction("iFlyChat.onChatConnect");
+intentFilter.addAction("iFlyChat.onGetSessionKey");
 intentFilter.addAction("iFlyChat.onGlobalListUpdate");
 intentFilter.addAction("iFlyChat.onMessageFromRoom");
 intentFilter.addAction("iFlyChat.onMessageFromUser");
@@ -149,6 +150,9 @@ intentFilter.addAction("iFlyChat.onMessageDeleteFromRoom");
 intentFilter.addAction("iFlyChat.onMessageDeleteFromUser");
 intentFilter.addAction("iFlyChat.onRoomThreadHistoryClear");
 intentFilter.addAction("iFlyChat.onUserThreadHistoryClear");
+intentFilter.addAction("iFlyChat.onUserThreadHistory");
+intentFilter.addAction("iFlyChat.onRoomThreadHistory");
+intentFilter.addAction("iFlyChat.onUploadProgress");
 intentFilter.addAction("iFlyChat.onError");
 </code>
 <br>
