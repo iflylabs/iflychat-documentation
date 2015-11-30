@@ -99,41 +99,41 @@ iFlyChatConfig config = new iFlyChatConfig(serverHost, authUrl, isHttps);
    ```
 
 4. To receive events from server. Create and initialize your receiver object and call `onReceive()` method.
-```
-private BroadcastReceiver bReceiver = new BroadcastReceiver() {
-    @Override
-    public void onReceive(Context context, Intent intent) {
-}};
-```
+  ```
+  private BroadcastReceiver bReceiver = new BroadcastReceiver() {
+      @Override
+      public void onReceive(Context context, Intent intent) {
+  }};
+  ```
 
 5. To receive event `iFlyChat.onMessageFromUser` corresponding to your action of `sendMessageToUser`. Match the intent action in your `onReceive()` method. If matched then you will get corresponding `iFlyChatMessage` object.
-```
-if (intent.getAction().equals("iFlyChat.onMessageFromUser")) {
-    message = intent.getParcelableExtra("messageObj");
-}
-```
+  ```
+  if (intent.getAction().equals("iFlyChat.onMessageFromUser")) {
+      message = intent.getParcelableExtra("messageObj");
+  }
+  ```
 
 6. To receive event `iFlyChat.onMessageFromRoom` corresponding to your action of `sendMessageToRoom`. Match the intent action in your `onReceive()` method. If matched then you will get corresponding `iFlyChatMessage` object.
-```
-if (intent.getAction().equals("iFlyChat.onMessageFromRoom")) {
-    message = intent.getParcelableExtra("messageObj");
-}
-```
+  ```
+  if (intent.getAction().equals("iFlyChat.onMessageFromRoom")) {
+      message = intent.getParcelableExtra("messageObj");
+  }
+  ```
 
 7. Unregister your broadcast Receiver in the `onStop()` method of your activity.
-```
-@Override
-protected void onStop() {
-    super.onStop();
-    bManager.unregisterReceiver(bReceiver);
-}
-```
+  ```
+  @Override
+  protected void onStop() {
+      super.onStop();
+      bManager.unregisterReceiver(bReceiver);
+  }
+  ```
 
 8. Disconnect chat whenever the application is terminated. This can be done in your activity’s `onDestroy()` method by calling `disconnectChat()` method of service object.
-```
-@Override
-protected void onDestroy(){
-    service.disconnectChat();
-    super.onDestroy();
-}
-```
+  ```
+  @Override
+  protected void onDestroy(){
+      service.disconnectChat();
+      super.onDestroy();
+  }
+  ```
