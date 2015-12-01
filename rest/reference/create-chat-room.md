@@ -30,19 +30,16 @@ The response would be following:
 | :------------- |:------------- | :-------------|
 | Object | JSON | It would contain room_id of this newly created room which you can store in your database for internal mapping. |
 
-<p><strong>Curl Command</strong></p>
+**Curl Command**
 
-<p>This the sample&nbsp;curl command required to make HTTP request:</p>
+This the sample curl command required to make HTTP request:
 
-<pre>
-curl -H "Content-Type: application/json" -X POST https://api.iflychat.com/api/1.1/room/create -d "{\"api_key\":\"Wr4vpoJ_ET3lpBdX9E9Tuk
-jzDF62L-gc7RGzuZvKqZgW5\", \"room_name\": \"test_room\", \"room_role\": \"1\"}"</pre>
+` curl -H "Content-Type: application/json" -X POST https://api.iflychat.com/api/1.1/room/create -d "{\"api_key\":\"Wr4vpoJ_ET3lpBdX9E9Tuk jzDF62L-gc7RGzuZvKqZgW5\", \"room_name\": \"test_room\", \"room_role\": \"1\"}" `
 
-<p><strong>Response</strong></p>
+**Response**
 
-<p>This is the sample response:</p>
+This is the sample response:
 
-<pre>
 {
   "room_id": 5
-}</pre>
+}
