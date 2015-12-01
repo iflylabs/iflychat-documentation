@@ -8,7 +8,7 @@ Make a HTTP POST request to the following url:
 
 | Url        | Type           |
 | :------------- |:------------- |
-| https://api.iflychat.com/api/1.1/room/{id}/create | POST |
+| https://api.iflychat.com/api/1.1/room/{id}/edit | POST |
 
 where {id} is the id room which you want to edit.
 
