@@ -193,6 +193,7 @@ Follow the steps below to intialize the chat
 
     [service connectChat];
     ~~~
+    
     ~~~
     //SWIFT
 
