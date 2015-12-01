@@ -11,21 +11,9 @@ if(intent.getAction().equals("iFlyChat.onError")){
     + error.getMessage() + " and source: " + error.getSource());
 }
 ```
-<br>
 
 There are several getter methods which returns some properties of the `iFlyChatError` object like iFlyChatLibrary generated error codes, reason of error and class and method where error has occurred. These getter methods are explained in the documentation of the iFlyChatLibrary.
 
-<br>
-
-**Debugging**
-
-To help you debug fast, several logs are set on constructors, methods and while broadcasting intents. These logs will tell whether a constructor or method resulted in success or an error or if an intent is about to be broadcasted. 
-
-To enable debugging in iFlyChatLibrary, you need to call `setIsDebug(true)` method of the `iFlyChatUtilities` class of iFlyChatLibrary. By default it is set to false.
-```
-iFLyChatUtilities.setIsDebug(true);
-```
-<br>
 To see the successful logs in logcat of android studio, user can select log level as `info`.
 
 To see the unsuccessful/error logs in logcat of android studio, user can select log level as `Error`.
