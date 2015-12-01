@@ -49,6 +49,10 @@ curl -H "Content-Type: application/json" -X POST https://api.iflychat.com/api/1.
 
 This is the sample response:
 
+~~~
+
 {
   "room_id": 5
 }
+
+~~~
