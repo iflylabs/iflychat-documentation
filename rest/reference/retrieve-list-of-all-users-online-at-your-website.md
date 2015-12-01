@@ -40,22 +40,23 @@ curl -H "Content-Type: application/json" -X POST https://api.iflychat.com/api/1.
 
 This is the sample response:
 
-{"users": [
+{
+"users": [
     {
-      "user_id": "1",
-      "user_role": "admin",
-      "user_name": "shashwat",
-      "user_status": "1",
-      "user_avatar_url": "/sites/default/files/styles/thumbnail/public/pictures/picture-1-1427288050.jpg?itok=glXtBjnp",
-      "user_profile_url": "javascript:void(0)"
+    "user_id": "1",
+    "user_role": "admin",
+    "user_name": "shashwat",
+    "user_status": "1",
+    "user_avatar_url": "/sites/default/files/styles/thumbnail/public/pictures/picture-1-1427288050.jpg?itok=glXtBjnp",
+    "user_profile_url": "javascript:void(0)"
     },
     {
-      "user_id": "2",
-      "user_role": "admin",
-      "user_name": "shubham",
-      "user_status": "1",
-      "user_avatar_url": "/sites/all/modules/drupalchat/themes/light/images/default_avatar.png",
-      "user_profile_url": "javascript:void(0)"
+    "user_id": "2",
+    "user_role": "admin",
+    "user_name": "shubham",
+    "user_status": "1",
+    "user_avatar_url": "/sites/all/modules/drupalchat/themes/light/images/default_avatar.png",
+    "user_profile_url": "javascript:void(0)"
     },
   ],
   "length": 2
