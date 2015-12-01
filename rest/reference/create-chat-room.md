@@ -16,31 +16,19 @@ This HTTP request should include following parameters:
 
 | Attribute        | Type          | Description |
 | :------------- |:------------- | :-------------|
-| https://api.iflychat.com/api/1.1/room/create | POST |
 | api_key | String | The private API key of your website |
 | room_name | String | name of the new room to be created |
 | room_role | String | The room role identifier. This determines access to room based upon user role. For example, in Drupal room role id for anonymous user is 1, and for authenticted users it is 2.
 | room_private | String | 1 if the room is going to be private (optional) |
 | room_moderate | String | 1 if the room is going to be moderate (optional)
 
-<p><strong>Response Attribute</strong></p>
+**Response Attribute**
 
-<p>The response would be following:</p>
+The response would be following:
 
-<table border="1" cellpadding="1" cellspacing="1" style="width:500px">
-	<tbody>
-		<tr>
-			<td>Attribute&nbsp;</td>
-			<td>Type</td>
-			<td>Description</td>
-		</tr>
-		<tr>
-			<td>Object</td>
-			<td>JSON</td>
-			<td>It would contain room_id of this newly created room which you can store in your database for internal mapping.</td>
-		</tr>
-	</tbody>
-</table>
+| Attribute        | Type          | Description |
+| :------------- |:------------- | :-------------|
+| Object | JSON | It would contain room_id of this newly created room which you can store in your database for internal mapping. |
 
 <p><strong>Curl Command</strong></p>
 
