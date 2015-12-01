@@ -40,6 +40,8 @@ curl -H "Content-Type: application/json" -X POST https://api.iflychat.com/api/1.
 
 This is the sample response:
 
+~~~
+
 {
 "users": [
     {
@@ -61,3 +63,5 @@ This is the sample response:
   ],
   "length": 2
 }
+
+~~~
