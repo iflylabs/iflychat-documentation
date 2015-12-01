@@ -36,7 +36,9 @@ The response would be following:
 
 This the sample curl command required to make HTTP request:
 
-`curl -H "Content-Type: application/json" -X POST&nbsp;https://api.iflychat.com/api/1.1/room/4/edit -d "{\"api_key\":\"Wr4vpoJ_ET3lpBdX9E9TutUic4Dgb-gc7RGzuZvKqZgW55\", \"room_name\": \"room_4\", \"room_role\": \"1\", \"room_private\": \"1\", \"room_moderate\": \"1\"}"`
+~~~
+curl -H "Content-Type: application/json" -X POST https://api.iflychat.com/api/1.1/room/4/edit -d "{\"api_key\":\"Wr4vpoJ_ET3lpBdX9E9TutUic4Dgb-gc7RGzuZvKqZgW55\", \"room_name\": \"room_4\", \"room_role\": \"1\", \"room_private\": \"1\", \"room_moderate\": \"1\"}"
+~~~
 
 **Response**
 
