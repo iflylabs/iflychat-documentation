@@ -1,25 +1,14 @@
-<h3>How to create a new room using iFlyChat API</h3>
+###How to create a new room using iFlyChat API
 
-<p>You can use iFlyChat API to programmatically create a new global or private room.</p>
+You can use iFlyChat API to programmatically create a new global or private room.
 
-<p><strong>Header Table</strong></p>
+**Header Table**
 
-<p>Make a&nbsp;HTTP POST request to the following url:</p>
+Make a HTTP POST request to the following url:
 
-<table border="1" cellpadding="1" cellspacing="1" style="width:400px">
-	<tbody>
-		<tr>
-			<td><strong>Url</strong></td>
-			<td><strong>Type</strong></td>
-		</tr>
-		<tr>
-			<td>
-			<p>https://{networkName}.iflychat.com/api/1.1/room/create</p>
-			</td>
-			<td>POST</td>
-		</tr>
-	</tbody>
-</table>
+| Url        | Type           |
+| :------------- |:------------- |
+| https://api.iflychat.com/api/1.1/room/create | POST |
 
 <p><strong>Request Attribute</strong></p>
 
