@@ -20,7 +20,7 @@ This HTTP request should include following parameters:
 | :------------- |:------------- | :-------------|
 | api_key | String | The private API key of your website |
 | room_name | String | name of the new room to be edited |
-| room_role | String | The room role identifier. This determines access to room based upon user role. For example, in Drupal room role id for anonymous user is 1, and for authenticted users it is 2.
+| room_role | String | The room role identifier. This determines access to room based upon user role. For example, in Drupal room role id for anonymous user is 1, and for authenticted users it is 2. |
 | room_private | String | 1 if the room is going to be private (optional) |
 | room_moderate | String | 1 if the room is going to be moderate (optional) |
 
