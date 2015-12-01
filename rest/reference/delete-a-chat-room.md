@@ -1,14 +1,43 @@
-You can use iFlyChat API to programmatically delete any chat room. To do so, make a HTTP POST request to the following URL: https://api.iflychat.com/api/1.0/room/{id}/delete, where {id} is the id of the room which you want to delete.
+###How to delete a room using iFlyChat API
 
- 
+You can use iFlyChat API to programmatically delete any room.
+
+**Header Table**
+
+Make a HTTP POST request to the following url:
+
+| Url        | Type           |
+| :------------- |:------------- |
+| https://api.iflychat.com/api/1.1/room/{id}/delete | POST |
+
+where {id} is the id room which you want to delete.
+
+**Request Attribute**
 
 This HTTP request should include following parameters:
 
- 
+| Attribute        | Type          | Description |
+| :------------- |:------------- | :-------------|
+| api_key | String | The private API key of your website |
 
-api_key - The private API key of your website   
- 
+**Response Attribute**
 
-The response would be JSON encoded.
+The response would be following:
 
-Please note that you should be using an Enterprise plan in order to be able to use this feature.
+| Attribute        | Type          | Description |
+| :------------- |:------------- | :-------------|
+| Object | JSON | It would return { success: true } |
+
+**Curl Command**
+
+This the sample curl command required to make HTTP request:
+
+`curl -H "Content-Type: application/json" -X POST&nbsp;https://api.iflychat.com/api/1.1/room/4/delete -d "{\"api_key\":\"Wr4vpoJ_ET3lpBdX9E9TutUic4Dgb-gc7RGzuZvKqZgW55\"}"`
+
+**Response**
+
+This is the sample response:
+
+{
+  "success": true
+}
