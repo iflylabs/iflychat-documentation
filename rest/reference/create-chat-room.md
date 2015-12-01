@@ -10,46 +10,17 @@ Make a HTTP POST request to the following url:
 | :------------- |:------------- |
 | https://api.iflychat.com/api/1.1/room/create | POST |
 
-<p><strong>Request Attribute</strong></p>
+**Request Attribute**
 
-<p>This HTTP request should include following parameters:</p>
-
-<table border="1" cellpadding="1" cellspacing="1" style="width:500px">
-	<tbody>
-		<tr>
-			<td><strong>Attribute</strong></td>
-			<td><strong>Type</strong></td>
-			<td><strong>Description</strong></td>
-		</tr>
-		<tr>
-			<td>api_key</td>
-			<td>String</td>
-			<td>The private API key of your website.</td>
-		</tr>
-		<tr>
-			<td>room_name</td>
-			<td>String</td>
-			<td>Name of the new room to be created.</td>
-		</tr>
-		<tr>
-			<td>room_role</td>
-			<td>String</td>
-			<td>
-			<p>The room role identifier. This determines access to room based upon user role. For example, in Drupal room role id for anonymous user is 1, and for authenticted users it is 2.</p>
-			</td>
-		</tr>
-		<tr>
-			<td>room_private</td>
-			<td>String</td>
-			<td>1 if the room is going to be private (optional)</td>
-		</tr>
-		<tr>
-			<td>room_moderate</td>
-			<td>String</td>
-			<td>1 if the room is going to be moderate (optional)</td>
-		</tr>
-	</tbody>
-</table>
+This HTTP request should include following parameters:
+| Attribute        | Type          | Description |
+| :------------- |:------------- | :-------------|
+| https://api.iflychat.com/api/1.1/room/create | POST |
+| api_key | String | The private API key of your website |
+| room_name | String | name of the new room to be created |
+| room_role | String | The room role identifier. This determines access to room based upon user role. For example, in Drupal room role id for anonymous user is 1, and for authenticted users it is 2.
+| room_private | String | 1 if the room is going to be private (optional) |
+| room_moderate | String | 1 if the room is going to be moderate (optional)
 
 <p><strong>Response Attribute</strong></p>
 
