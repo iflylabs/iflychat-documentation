@@ -30,7 +30,11 @@ The response would be following:
 
 This the sample curl command required to make HTTP request:
 
-` curl -H "Content-Type: application/json" -X POST https://api.iflychat.com/api/1.1/rooms/list -d "{\"api_key\":\"Wr4vpoJ_ET3lpBdX9E9TutUic4Dgb-gc7RGzuZvKqZgW5\"}" `
+~~~
+
+curl -H "Content-Type: application/json" -X POST https://api.iflychat.com/api/1.1/rooms/list -d "{\"api_key\":\"Wr4vpoJ_ET3lpBdX9E9TutUic4Dgb-gc7RGzuZvKqZgW5\"}"
+
+~~~
 
 **Response**
 
