@@ -9,16 +9,16 @@ Follow the steps below to intialize the chat
 
 1. Create and initialize the `iFlyChatUserSession` object.
 
-    ```obj-c
+    ~~~
     //OBJECTIVE-C
 
     iFlyChatUserSession *session = [[iFlyChatUserSession alloc] initIFlyChatUserSessionwithUserName:@"prateek" userPassword:@"password" userSessionKey:@"sessionkey if available otherwise empty string"];
-    ```
-    ```swift
+    ~~~
+    ~~~
     //SWIFT
 
     var session: iFlyChatUserSession = iFlyChatUserSession(IFlyChatUserSessionwithUserName: "prateek", userPassword: "password", userSessionKey: "sessionkey if available otherwise empty string")
-    ```
+    ~~~
 
     >`UserName` and `userPassword` are the two sufficient parameters required by iFlyChat to authenticate the user and get the session key from the server. These parameters are to be taken from the user through the user interface.
 
@@ -27,16 +27,16 @@ Follow the steps below to intialize the chat
 
 2. Create and initialize the `iFlyChatConfig` object
 
-    ```obj-c
+    ~~~
     //OBJECTIVE-C
 
     iFlyChatConfig *config = [[iFlyChatConfig alloc] initIFlyChatConfigwithServerHost:@"example.com" authUrl:@"authenticate/the/user.com" isHttps:YES];
-    ```
-    ```
+    ~~~
+    ~~~
     //SWIFT
 
     var config: iFlyChatConfig = iFlyChatConfig(IFlyChatConfigwithServerHost: "example.com", authUrl: "authenticate/the/user.com")
-    ```
+    ~~~
   
     >`Server host` is the URL string provided to the user by iFlyChat when the user signs up for the service. This is the key element through which the client connects to the iFlyChat server.
 
@@ -49,32 +49,32 @@ Follow the steps below to intialize the chat
 
 3. Set the `"AutoReconnect"` parameter of the `iFlyChatConfig` object to whatever to you want to. Default is "YES" or true.
 
-    ```obj-c
+    ~~~
     //OBJECTIVE-C
 
     [config setAutoReconnect:YES];  
-    ```
-    ```swift
+    ~~~
+    ~~~
     //SWIFT
 
     config.setAutoReconnect(true)
-    ```
+    ~~~
   
     >This BOOL value is set after `iFlyChatConfig` object is created. By default it is set to "YES" or true. This value specifies whether the client should attempt a reconnect in case the connection is broken if an invalid session key is supplied while creating `iFlyChatUserSession` object or due to some network or server error. There is a hard coded limit on the number of times reconnection will be attempted and that is equal to 10.
 
 
 4. Create and initialize the `iFlyChatUserAuthService` object
 
-    ```obj-c
+    ~~~
     //OBJECTIVE-C
 
     iFlyChatUserAuthService *authService = [[iFlyChatUserAuthService alloc] initIFlyChatUserAuthServiceWithConfig:config userSession:session];
-    ```
-    ```swift
+    ~~~
+    ~~~
     //SWIFT
 
     var authService: iFlyChatUserAuthService = iFlyChatUserAuthService(IFlyChatUserAuthServiceWithConfig: config, userSession: session)
-    ```
+    ~~~
   
     >The object of this class stores the `iFlyChatUserSession` and `iFlyChatConfig` objects created above at one place. Therefore, it is necessary to create those objects first before creating an object for this class.
 
@@ -85,46 +85,46 @@ Follow the steps below to intialize the chat
 
 5. Get `iFlyChatSettings` using `iFlyChatConfig` object
 
-    ```obj-c
+    ~~~
     //OBJECTIVE-C
 
     [config getiFlyChatSettingsUsingSessionKey:<sessionkey>];
-    ```
-    ```swift
+    ~~~
+    ~~~
     //SWIFT
 
     config.getiFlyChatSettingsUsingSessionKey(<sessionkey>)
-    ```
+    ~~~
 
 
 6. Create and initialize `iFlyChatService` object.
 
-    ```obj-c
+    ~~~
     //OBJECTIVE-C
 
     iFlyChatService *service = [[iFlyChatService alloc] initIFlyChatServicewithConfig:config session:session userAuthService:authService];
-    ```
-    ```swift
+    ~~~
+    ~~~
     //SWIFT
 
     service = iFlyChatService(IFlyChatServicewithConfig: config, session: session, userAuthService: authService)
-    ```
+    ~~~
   
     >The object of this class performs all the core functions of iFlyChat. While initializing it requires `iFlyChatConfig`, `iFlyChatUserSession` and `iFlyChatUserAuthService` objects created above. Therefore, it is necessary to create those objects first before creating the object for this class.
 
 
 7. Connect the chat
 
-    ```obj-c
+    ~~~
     //OBJECTIVE-C
 
     [service connectChat];
-    ```
-    ```
+    ~~~
+    ~~~
     //SWIFT
 
     service.connectChat()
-    ```
+    ~~~
   
     >This function initiates the process of connecting the client to iFlyChat chat servers. It checks for the session key validity while connecting and if it is invalid and auto reconnect (see above: `iFlyChatConfig`) value is set to "YES", then it automatically retrieves a new session key from the server and connects the chat. 
 
@@ -133,7 +133,7 @@ Follow the steps below to intialize the chat
 
 8. To listen to `"iFlyChat.onChatConnect"` event, the user needs to add the observer for this notification and retrieve the `iFlyChatUser` object and session key string from the notification object.
 
-    ```obj-c
+    ~~~
     //OBJECTIVE-C
 
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onChatConnect:) name:@”iFlyChat.onChatConnect” object:nil];  
@@ -144,8 +144,8 @@ Follow the steps below to intialize the chat
         iFlyChatUser *currentUser = [object objectForKey:@"iFlyChatCurrentUser"];  
         NSString *sessionKey = [object objectForKey:@"sessionKey"];  
     }  
-    ```
-    ```swift
+    ~~~
+    ~~~
     //SWIFT  
 
     NSNotificationCenter.defaultCenter().addObserver  
@@ -165,22 +165,22 @@ Follow the steps below to intialize the chat
             var skey: String = object.objectForKey("sessionKey") as! String  
         }  
     }  
-    ```
+    ~~~
 
 ##Disconnection
 
 1. To disconnect the chat, the user needs to call the following function of the `iFlyChatService` object
 
-    ```obj-c
+    ~~~
     //OBJECTIVE-C
 
     [service disconnectChat];
-    ```
-    ```
+    ~~~
+    ~~~
     //SWIFT
 
     service.disconnectChat()
-    ```
+    ~~~
   
     >Along with calling this function, the user needs to remove the NSNotification observers for clean disconnection.
 
@@ -190,7 +190,7 @@ Follow the steps below to intialize the chat
 
     To listen to `"iFlyChat.onChatDisconnect"` event, the user needs to add the observer for this notification.
 
-    ```obj-c
+    ~~~
     //OBJECTIVE-C  
 
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onChatDisconnect:) name:@”iFlyChat.onChatDisconnect” object:nil];  
@@ -199,8 +199,8 @@ Follow the steps below to intialize the chat
     {  
         //perform  your clean up   
     }  
-    ```
-    ```swift
+    ~~~
+    ~~~
     //SWIFT  
 
     NSNotificationCenter.defaultCenter().addObserver  
@@ -215,4 +215,4 @@ Follow the steps below to intialize the chat
     {  
         //perform your operation  
     }  
-    ```
+    ~~~

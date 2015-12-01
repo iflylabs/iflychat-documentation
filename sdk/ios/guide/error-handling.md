@@ -4,7 +4,7 @@ There are various errors that the iFlyChatLibrary throws while performing some o
 
 To listen to this notification and receive the `onError` event, the user needs to add observer to the application and retrieve the `iFlyChatError` object from the notification:
 
-```obj-c
+~~~
 //OBJECTIVE-C
 
 [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onError:) name:@”iFlyChat.onError” object:nil];
@@ -16,8 +16,8 @@ To listen to this notification and receive the `onError` event, the user needs t
     NSString *message = [error getErrorMessage];
     NSString *source = [error getErrorSource];
 }
-```
-```swift
+~~~
+~~~
 //SWIFT
 
 NSNotificationCenter.defaultCenter().addObserver
@@ -35,6 +35,6 @@ func onError(notification: NSNotification)
     let message:NSString = error.getErrorMessage() as! NSString
     let source:NSString = error.getErrorSource() as! NSString
 }
-```
+~~~
 
 For more details on which errors are thrown, their error codes, error messages and error sources, see iFlyChatError.h file from `iFlyChatLibrary.framework`.

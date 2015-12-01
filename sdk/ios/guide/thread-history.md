@@ -6,22 +6,22 @@ Users can also get message history from iFlyChat servers for both rooms and user
 
     To get message history for a user, one needs to call a function from the iFlyChatService object and pass the various required parameters.
 
-    ```obj-c
+    ~~~
     //OBJECTIVE-C
 
     [service getUserThreadHistoryWithCurrentUserId:<logged in user id> forUserId:<user id of the user> forUserName:<user name of the user> messageId:<message id of the oldest available message>];
-    ```
-    ```swift
+    ~~~
+    ~~~
     //SWIFT
 
     service.getUserThreadHistoryWithCurrentUserId(<logged in user id>,forUserId:<user id of the user>,forUserName:<user name of the user>,messageId:<message id of the oldest available message>)
-    ```
+    ~~~
 
     After calling these functions, iFlyChat servers will send the thread history for the user. After processing the message, iFlyChatLibrary will send a notification named `"iFlyChat.onUserThreadHistory"` if the thread history is available otherwise `"iFlyChat.onEmptyThreadHistory"` if the thread history is empty.
 
     To listen to this notification and receive the `onThreadHistory` event, the user needs to add observer to the application and retrieve the `"forUserId"` string and `iFlyChatOrderedDictionary` object from the notification:
 
-    ```obj-c
+    ~~~
     //OBJECTIVE-C
 
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onUserThreadHistory:) name:@”iFlyChat.onUserThreadHistory” object:nil];
@@ -34,8 +34,8 @@ Users can also get message history from iFlyChat servers for both rooms and user
             iFlyChatOrderedDictionary *threadHistory = [result objectForKey:@"threadHistory"];
         }
     }
-    ```
-    ```swift
+    ~~~
+    ~~~
     //SWIFT
 
     NSNotificationCenter.defaultCenter().addObserver
@@ -54,7 +54,7 @@ Users can also get message history from iFlyChat servers for both rooms and user
             let threadHistory:iFlyChatOrderedDictionary = notification.object! as! iFlyChatOrderedDictionary
         }
     }
-    ```
+    ~~~
 
     NOTE: If the thread history is empty, iFlyChatLibrary will send a notification with only one object, i.e., a `"forId"` string which can be empty also.  
 
@@ -63,22 +63,22 @@ Users can also get message history from iFlyChat servers for both rooms and user
 
     To get message history for a room, one needs to call a function from the `iFlyChatService` object and pass the various required parameters.
 
-    ```obj-c
+    ~~~
     //OBJECTIVE-C
 
     [service getRoomThreadHistoryWithCurrentUserId:<logged in user id> forUserId:<room id of the room> forRoomName:<room name of the room> messageId:<message id of the oldest available message>];
-    ```
-    ```swift
+    ~~~
+    ~~~
     //SWIFT
 
     service.getRoomThreadHistoryWithCurrentUserId(<logged in user id>,forUserId:<room id of the room>,forRoomName:<room name of the room>,messageId:<message id of the oldest available message>)
-    ```
+    ~~~
 
     After calling these functions, iFlyChat servers will send the thread history for the room. After processing the message, iFlyChatLibrary will send a notification named `"iFlyChat.onRoomThreadHistory"` if the thread history is available otherwise `"iFlyChat.onEmptyThreadHistory"` if the thread history is empty.
 
     To listen to this notification and receive the `onThreadHistory` event, the user needs to add observer to the application and retrieve the `"forRoomId"` string and `iFlyChatOrderedDictionary` object from the notification:
 
-    ```obj-c
+    ~~~
     //OBJECTIVE-C
 
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onRoomThreadHistory:) name:@”iFlyChat.onRoomThreadHistory” object:nil];
@@ -91,8 +91,8 @@ Users can also get message history from iFlyChat servers for both rooms and user
             iFlyChatOrderedDictionary *threadHistory = [result objectForKey:@"threadHistory"];
         }
     }
-    ```
-    ```swift
+    ~~~
+    ~~~
     //SWIFT
 
     NSNotificationCenter.defaultCenter().addObserver
@@ -111,6 +111,6 @@ Users can also get message history from iFlyChat servers for both rooms and user
             let threadHistory:iFlyChatOrderedDictionary = notification.object! as! iFlyChatOrderedDictionary
         }
     }
-    ```
+    ~~~
 
     NOTE: If the thread history is empty, iFlyChatLibrary will send a notification with only one object, i.e., a `"forId"` string which can be empty also.
