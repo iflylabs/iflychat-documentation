@@ -20,7 +20,5 @@ To get a `iFlyChatRoster` object from this broadcast and receive the updated glo
         }
         
     }
-~~~
-<br>
-
+~~~  
 You can get updated `iFlyChatRoster` object from which you can get updated users and rooms `LinkedHashMap` by calling corresponding getter methods. You can get a single user and a room object from the users and rooms `LinkedHashMap` objects by running a for loop and doing `getValue()`.

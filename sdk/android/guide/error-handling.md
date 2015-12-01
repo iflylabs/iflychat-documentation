@@ -10,8 +10,7 @@ if(intent.getAction().equals("iFlyChat.onError")){
     Log.e("iFlyChat.onError","Error code is: " + error.getCode() + " with message: " 
     + error.getMessage() + " and source: " + error.getSource());
 }
-~~~
-
+~~~  
 There are several getter methods which returns some properties of the `iFlyChatError` object like iFlyChatLibrary generated error codes, reason of error and class and method where error has occurred. These getter methods are explained in the documentation of the iFlyChatLibrary.
 
 To see the successful logs in logcat of android studio, user can select log level as `info`.
