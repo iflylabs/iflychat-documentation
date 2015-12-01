@@ -5,7 +5,7 @@ iFlyChatLibrary polls every 2 mins to the server to get the updated user and roo
 To get a `iFlyChatRoster` object from this broadcast and receive the updated global list. The user needs to check for corresponding intent action and retrieve the `iFlyChatRoster` object :
 
 * Match the intent action in your `onReceive()` method.
-```
+~~~ {.language-java}
     if (intent.getAction().equals("iFlyChat.onGlobalListUpdate")) {
     
         iFlyChatRoster roster = intent.getParcelableExtra("globalList");
@@ -20,7 +20,7 @@ To get a `iFlyChatRoster` object from this broadcast and receive the updated glo
         }
         
     }
-```
+~~~
 <br>
 
 You can get updated `iFlyChatRoster` object from which you can get updated users and rooms `LinkedHashMap` by calling corresponding getter methods. You can get a single user and a room object from the users and rooms `LinkedHashMap` objects by running a for loop and doing `getValue()`.
