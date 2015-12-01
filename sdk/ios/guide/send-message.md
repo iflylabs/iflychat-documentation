@@ -12,6 +12,7 @@
 
     [service sendMessagetoUser:msg];
     ~~~
+
     ~~~
     //SWIFT
 
@@ -40,6 +41,7 @@
 
     [service sendMessagetoRoom:msg];
     ~~~
+
     ~~~
     //SWIFT
 
@@ -73,6 +75,7 @@
         iFlyChatMessage *msg = [notification object];
     }
     ~~~
+
     ~~~
     //SWIFT
 
@@ -106,6 +109,7 @@
         iFlyChatMessage *msg = [notification object];
     }
     ~~~
+    
     ~~~
     //SWIFT
 

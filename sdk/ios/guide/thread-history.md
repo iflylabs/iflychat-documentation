@@ -11,6 +11,7 @@ Users can also get message history from iFlyChat servers for both rooms and user
 
     [service getUserThreadHistoryWithCurrentUserId:<logged in user id> forUserId:<user id of the user> forUserName:<user name of the user> messageId:<message id of the oldest available message>];
     ~~~
+
     ~~~
     //SWIFT
 
@@ -35,6 +36,7 @@ Users can also get message history from iFlyChat servers for both rooms and user
         }
     }
     ~~~
+
     ~~~
     //SWIFT
 
@@ -68,6 +70,7 @@ Users can also get message history from iFlyChat servers for both rooms and user
 
     [service getRoomThreadHistoryWithCurrentUserId:<logged in user id> forUserId:<room id of the room> forRoomName:<room name of the room> messageId:<message id of the oldest available message>];
     ~~~
+
     ~~~
     //SWIFT
 
@@ -92,6 +95,7 @@ Users can also get message history from iFlyChat servers for both rooms and user
         }
     }
     ~~~
+    
     ~~~
     //SWIFT
 

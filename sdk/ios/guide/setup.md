@@ -56,7 +56,7 @@
 
     or if you need to allow all "http" connections, you may write the following code:
 
-    ~~~xml
+    ~~~
     <key>NSAppTransportSecurity&lt;/key>  
          <dict>  
               <key>NSAllowsArbitraryLoads</key><true/>  

@@ -14,6 +14,7 @@ Follow the steps below to intialize the chat
 
     iFlyChatUserSession *session = [[iFlyChatUserSession alloc] initIFlyChatUserSessionwithUserName:@"prateek" userPassword:@"password" userSessionKey:@"sessionkey if available otherwise empty string"];
     ~~~
+
     ~~~
     //SWIFT
 
@@ -32,6 +33,7 @@ Follow the steps below to intialize the chat
 
     iFlyChatConfig *config = [[iFlyChatConfig alloc] initIFlyChatConfigwithServerHost:@"example.com" authUrl:@"authenticate/the/user.com" isHttps:YES];
     ~~~
+
     ~~~
     //SWIFT
 
@@ -54,6 +56,7 @@ Follow the steps below to intialize the chat
 
     [config setAutoReconnect:YES];  
     ~~~
+
     ~~~
     //SWIFT
 
@@ -70,6 +73,7 @@ Follow the steps below to intialize the chat
 
     iFlyChatUserAuthService *authService = [[iFlyChatUserAuthService alloc] initIFlyChatUserAuthServiceWithConfig:config userSession:session];
     ~~~
+
     ~~~
     //SWIFT
 
@@ -90,6 +94,7 @@ Follow the steps below to intialize the chat
 
     [config getiFlyChatSettingsUsingSessionKey:<sessionkey>];
     ~~~
+
     ~~~
     //SWIFT
 
@@ -104,6 +109,7 @@ Follow the steps below to intialize the chat
 
     iFlyChatService *service = [[iFlyChatService alloc] initIFlyChatServicewithConfig:config session:session userAuthService:authService];
     ~~~
+
     ~~~
     //SWIFT
 
@@ -120,6 +126,7 @@ Follow the steps below to intialize the chat
 
     [service connectChat];
     ~~~
+
     ~~~
     //SWIFT
 
@@ -145,6 +152,7 @@ Follow the steps below to intialize the chat
         NSString *sessionKey = [object objectForKey:@"sessionKey"];  
     }  
     ~~~
+
     ~~~
     //SWIFT  
 
@@ -176,6 +184,7 @@ Follow the steps below to intialize the chat
 
     [service disconnectChat];
     ~~~
+
     ~~~
     //SWIFT
 
@@ -200,6 +209,7 @@ Follow the steps below to intialize the chat
         //perform  your clean up   
     }  
     ~~~
+    
     ~~~
     //SWIFT  
 

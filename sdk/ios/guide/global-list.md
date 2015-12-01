@@ -17,6 +17,7 @@ To listen to this notification and receive the updated global list, the user nee
     iFlyChatOrderedDictionary *roomList = [updatedRoster getRoomLIst];
 }
 ~~~
+
 ~~~
 //SWIFT
 

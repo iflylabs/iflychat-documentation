@@ -21,6 +21,7 @@ Following is a table that details out the which operation requires admin level p
 
     [service deleteChatMessageFromUser:@"m_12345678_01234567_123456789" userId:@"12345678"];
     ~~~
+
     ~~~
     //SWIFT
 
@@ -41,6 +42,7 @@ Following is a table that details out the which operation requires admin level p
         NSString *messageid = [notification object];
     }
     ~~~
+
     ~~~
     //SWIFT
 
@@ -67,6 +69,7 @@ Following is a table that details out the which operation requires admin level p
 
     [service deleteChatMessageFromRoom:@"m_12345678_0_123456789" roomId:@"0"];
     ~~~
+
     ~~~
     //SWIFT
 
@@ -87,6 +90,7 @@ Following is a table that details out the which operation requires admin level p
         NSString *messageid = [notification object];
     }
     ~~~
+
     ~~~
     //SWIFT
 
@@ -125,6 +129,7 @@ Following is a table that details out the which operation requires admin level p
 
     [service clearUserThreadHistory:@"12345678"];
     ~~~
+
     ~~~
     //SWIFT
 
@@ -145,6 +150,7 @@ Following is a table that details out the which operation requires admin level p
         NSString *userid = [notification object];
     }
     ~~~
+
     ~~~
     //SWIFT
 
@@ -171,6 +177,7 @@ Following is a table that details out the which operation requires admin level p
 
     [service onRoomThreadHistoryClear:@"0"];
     ~~~
+
     ~~~
     //SWIFT
 
@@ -191,6 +198,7 @@ Following is a table that details out the which operation requires admin level p
         NSString *roomid = [notification object];
     }
     ~~~
+    
     ~~~
     //SWIFT
 

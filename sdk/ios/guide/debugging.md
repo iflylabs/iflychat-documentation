@@ -6,6 +6,7 @@ If the user needs to debug while making his/her own application, then the debug 
 
 [Utilities setIsDebug:YES];
 ~~~
+
 ~~~
 //SWIFT
 

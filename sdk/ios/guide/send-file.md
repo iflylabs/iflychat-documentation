@@ -12,6 +12,7 @@
 
     [service sendFiletoUser:msg];
     ~~~
+
     ~~~
     //SWIFT
 
@@ -40,6 +41,7 @@
 
     [service sendFiletoRoom:msg];
     ~~~
+
     ~~~
     //SWIFT
 
@@ -74,6 +76,7 @@
         NSString *fileURL = msg.getMessage;
     }
     ~~~
+
     ~~~
     //SWIFT
 
@@ -109,6 +112,7 @@
         NSString *fileURL = msg.getMessage;
     }
     ~~~
+    
     ~~~
     //SWIFT
 

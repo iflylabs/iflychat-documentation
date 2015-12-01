@@ -11,6 +11,7 @@ Apart from messaging, the user can also perform some admin level operations and 
 
     [service kickUser:@"12345678"];
     ~~~
+
     ~~~
     //SWIFT
 
@@ -31,6 +32,7 @@ Apart from messaging, the user can also perform some admin level operations and 
         NSString *userid = [notification object];
     }
     ~~~
+
     ~~~
     //SWIFT
 
@@ -57,6 +59,7 @@ Apart from messaging, the user can also perform some admin level operations and 
 
     [service banUser:@"12345678"];
     ~~~
+
     ~~~
     //SWIFT
 
@@ -77,6 +80,7 @@ Apart from messaging, the user can also perform some admin level operations and 
         NSString *userid = [notification object];
     }
     ~~~
+
     ~~~
     //SWIFT
 
@@ -103,6 +107,7 @@ Apart from messaging, the user can also perform some admin level operations and 
 
     [service banIp:@"12345678"];
     ~~~
+
     ~~~
     //SWIFT
 
@@ -123,6 +128,7 @@ Apart from messaging, the user can also perform some admin level operations and 
         NSString *userid = [notification object];
     }
     ~~~
+    
     ~~~
     //SWIFT
 
