@@ -15,7 +15,7 @@
   
 3. Import the `“iFlyChatLibrary/iFlyChatlibrary.h”` file wherever you want to use the chat service functions.
 
-    ```obj-c
+    ```
     #import "iFlyChatLibrary/iFlyChatLibrary.h"
     ```
     
@@ -34,7 +34,7 @@
 
 2. iOS 9's `App Transport Security` does not allow for "http" connections. To work around it, you may add an exception in the `Info.plist` file in the main <dict> tag like so:
 
-    ```xml
+    ```
     <key>NSAppTransportSecurity&lt;/key>  
     <dict>  
           <key>NSAllowsArbitraryLoads</key>  
@@ -56,7 +56,7 @@
 
     or if you need to allow all "http" connections, you may write the following code:
 
-    ```xml
+    ```
     <key>NSAppTransportSecurity&lt;/key>  
          <dict>  
               <key>NSAllowsArbitraryLoads</key><true/>  
