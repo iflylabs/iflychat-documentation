@@ -8,9 +8,9 @@ Make a HTTP POST request to the following url:
 
 | Url        | Type           |
 | :------------- |:------------- |
-| https://api.iflychat.com/api/1.1/room/{id}/edit | POST |
+| `https://api.iflychat.com/api/1.1/room/{id}/edit` | POST |
 
-where {id} is the id room which you want to edit.
+where `{id}` is the id room which you want to edit.
 
 **Request Attribute**
 
@@ -18,11 +18,11 @@ This HTTP request should include following parameters:
 
 | Attribute        | Type          | Description |
 | :------------- |:------------- | :-------------|
-| api_key | String | The private API key of your website |
-| room_name | String | name of the new room to be edited |
-| room_role | String | The room role identifier. This determines access to room based upon user role. For example, in Drupal room role id for anonymous user is 1, and for authenticted users it is 2. |
-| room_private | String | 1 if the room is going to be private (optional) |
-| room_moderate | String | 1 if the room is going to be moderate (optional) |
+| `api_key` | String | The private API key of your website |
+| `room_name` | String | name of the new room to be edited |
+| `room_role` | String | The room role identifier. This determines access to room based upon user role. For example, in Drupal room role id for anonymous user is 1, and for authenticted users it is 2. |
+| `room_private` | String | 1 if the room is going to be private (optional) |
+| `room_moderate` | String | 1 if the room is going to be moderate (optional) |
 
 **Response Attribute**
 
@@ -30,7 +30,7 @@ The response would be following:
 
 | Attribute        | Type          | Description |
 | :------------- |:------------- | :-------------|
-| Object | JSON | It would return { success: true } |
+| `Object` | JSON | It would return { success: true } |
 
 **Curl Command**
 
