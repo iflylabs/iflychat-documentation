@@ -8,7 +8,7 @@ Make a HTTP POST request to the following url:
 
 | Url        | Type           |
 | :------------- |:------------- |
-| https://api.iflychat.com/api/1.1/ips/banned/list | POST |
+| `https://api.iflychat.com/api/1.1/ips/banned/list` | POST |
 
 **Request Attribute**
 
@@ -16,7 +16,7 @@ This HTTP request should include following parameters:
 
 | Attribute        | Type          | Description |
 | :------------- |:------------- | :-------------|
-| api_key | String | The private API key of your website |
+| `api_key` | String | The private API key of your website |
 
 **Response Attribute**
 
@@ -24,7 +24,7 @@ The response would be following:
 
 | Attribute        | Type          | Description |
 | :------------- |:------------- | :-------------|
-| Object | JSON | It would contain ip of all users banned at your website.. |
+| `Object` | JSON | It would contain ip of all users banned at your website.. |
 
 **Curl Command**
 
