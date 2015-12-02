@@ -82,7 +82,7 @@ This is the sample response:
 
 ~~~
 
- 2. Retrieving thread history of a user or list of users
+2. Retrieving thread history of a user or list of users
 
 **Request Attribute**
 
