@@ -8,7 +8,7 @@ Make a HTTP POST request to the following url:
 
 | Url        | Type           |
 | :------------- |:------------- |
-| https://api.iflychat.com/api/1.1/rooms/list | POST |
+| `https://api.iflychat.com/api/1.1/rooms/list` | POST |
 
 **Request Attribute**
 
@@ -16,7 +16,7 @@ This HTTP request should include following parameters:
 
 | Attribute        | Type          | Description |
 | :------------- |:------------- | :-------------|
-| api_key | String | The private API key of your website |
+| `api_key` | String | The private API key of your website |
 
 **Response Attribute**
 
@@ -24,7 +24,7 @@ The response would be following:
 
 | Attribute        | Type          | Description |
 | :------------- |:------------- | :-------------|
-| Object | JSON | It would contain room_id, room_name, room_role and role_private for all rooms of your website. It also contains length of the total rooms. |
+| `Object` | JSON | It would contain room_id, room_name, room_role and role_private for all rooms of your website. It also contains length of the total rooms. |
 
 **Curl Command**
 
@@ -40,6 +40,33 @@ curl -H "Content-Type: application/json" -X POST https://api.iflychat.com/api/1.
 
 This is the sample response:
 
+~~~
+
 {
-  "room_id": 5
+  "rooms": [
+    {
+      "room_id": 1,
+      "room_name": "test1",
+      "room_role": "1",
+      "room_private": "0",
+      "room_moderate": "0"
+    },
+    {
+      "room_id": 2,
+      "room_name": "test2",
+      "room_role": "1",
+      "room_private": "0",
+      "room_moderate": "0"
+    },
+    {
+      "room_id": 3,
+      "room_name": "test3",
+      "room_role": "1",
+      "room_private": "0",
+      "room_moderate": "0"
+    }
+  ],
+  "length": 3
 }
+
+~~~
