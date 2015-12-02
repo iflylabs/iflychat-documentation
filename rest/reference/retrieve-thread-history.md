@@ -82,7 +82,7 @@ This is the sample response:
 
 ~~~
 
-2. Retrieving thread history of a user or list of users
+ 2. Retrieving thread history of a user or list of users
 
 **Request Attribute**
 
@@ -103,7 +103,7 @@ The response would be following:
 
 | Attribute        | Type          | Description |
 | :------------- |:------------- | :-------------|
-| Object | JSON | It would contain thread history of that user or list of users with time, from_id, to_id, from_name, to_name, message, message_id as properties if `thread_filter` parameter is user. If `thread_filter` is room then the parameters would be  time, from_id, room_id, from_name, room_name, message and message_id. |
+| Object | JSON | It would contain thread history of that user or list of users with time, from_id, to_id, from_name, to_name, message, message_id as properties if `thread_filter` parameter is user and if  `thread_filter` is room then the parameters would be  time, from_id, room_id, from_name, room_name, message and message_id. |
 
 **Curl Command**
 
