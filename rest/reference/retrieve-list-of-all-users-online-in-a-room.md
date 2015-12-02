@@ -8,9 +8,9 @@ Make a HTTP POST request to the following url:
 
 | Url        | Type           |
 | :------------- |:------------- |
-| https://api.iflychat.com/api/1.1/room/{id}/users | POST |
+| `https://api.iflychat.com/api/1.1/room/{id}/users` | POST |
 
-where {id} is the id of the room
+where `{id}` is the id of the room
 
 **Request Attribute**
 
@@ -18,7 +18,7 @@ This HTTP request should include following parameters:
 
 | Attribute        | Type          | Description |
 | :------------- |:------------- | :-------------|
-| api_key | String | The private API key of your website |
+| `api_key` | String | The private API key of your website |
 
 **Response Attribute**
 
@@ -26,7 +26,7 @@ The response would be following:
 
 | Attribute        | Type          | Description |
 | :------------- |:------------- | :-------------|
-| Object | JSON | It would contain user_id, user_name, user_role, user_status, user_avatar_url and user_profile_url of all users online at your website. It also contains the total users online in room. |
+| `Object` | JSON | It would contain user_id, user_name, user_role, user_status, user_avatar_url and user_profile_url of all users online at your website. It also contains the total users online in room. |
 
 **Curl Command**
 
@@ -34,7 +34,7 @@ This the sample curl command required to make HTTP request:
 
 ~~~
 
-curl -H "Content-Type: application/json" -X POST https://api.iflychat.com/api/1.1/room/create -d "{\"api_key\":\"Wr4vpoJ_ET3lpBdX9E9TutUic4Dgb-gc7RGzuZvKqZgW5\"}"
+curl -H "Content-Type: application/json" -X POST https://api.iflychat.com/api/1.1/room/5/users -d "{\"api_key\":\"Wr4vpoJ_ET3lpBdX9E9TutUic4Dgb-gc7RGzuZvKqZgW5\"}"
 
 ~~~
 
