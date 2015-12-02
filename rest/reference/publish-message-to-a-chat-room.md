@@ -41,7 +41,7 @@ This the sample curl command required to make HTTP request:
 
 ~~~
 
-curl -H "Content-Type: application/json" -X POST https://api.iflychat.com/api/1.1/room/5/publish -d "{\"api_key\":\"Wr4vpoJ_ET3lpBdX9E9TutUic4Dgb-gc7RGzuZvKqZgW55\", \"uid\": \"5\", \"name\": \"anmol\", \"picture_url\": \"//web.iflychatdev.com/websites/d7/sites/default/files/styles/thumbnail/public/pictures/picture-5-1427286796.jpg?itok=T_MyAL4_\", \"profile_url\": \"javascript:void(0)\", \"message\": \"test msg\", \"color\": \"#222222\", \"roles[0]\": \"all users\"}"
+curl -H "Content-Type: application/json" -X POST https://api.iflychat.com/api/1.1/room/5/publish -d "{\"api_key\":\"Wr4vpoJ_ET3lpBdX9E9TutUic4Dgb-gc7RGzuZvKqZgW55\", \"uid\": \"5\", \"name\": \"anmol\", \"picture_url\": \"https://api.iflychat.com/sites/default/files/styles/thumbnail/public/pictures/picture-5-1427286796.jpg?itok=T_MyAL4_\", \"profile_url\": \"javascript:void(0)\", \"message\": \"test msg\", \"color\": \"#222222\", \"roles[0]\": \"all users\"}"
 
 ~~~
 
