@@ -8,7 +8,7 @@ Make a HTTP POST request to the following url:
 
 | Url        | Type           |
 | :------------- |:------------- |
-| `https://api.iflychat.com/api/1.1/ip/{ip}/kick` | POST |
+| `https://api.iflychat.com/api/1.1/ip/{ip}/unban` | POST |
 
 where `{ip`} is the ip which you want to unban.
 
