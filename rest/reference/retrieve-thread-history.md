@@ -8,7 +8,7 @@ Make a HTTP POST request to the following url:
 
 | Url        | Type           |
 | :------------- |:------------- |
-| https://api.iflychat.com/api/1.1/threads/get | POST |
+| `https://api.iflychat.com/api/1.1/threads/get` | POST |
 
 There are 3 different ways of retrieving thread history:
 
@@ -20,11 +20,11 @@ There are 3 different ways of retrieving thread history:
 
   | Attribute        | Type          | Description |
   | :------------- |:------------- | :-------------|
-  | api_key | String | The private API key of your website |
-  | room_id | String/Array | This can be a string or an array. The string will contain the id of the room whose thread history you      want to retrieve and the array will contain the id of the rooms whose thread history you want to retrieve. |
-  | start_timestamp | String | The start timestamp (in milliseconds) of the range between which you want the thread history (optional)   |
-  | end_timestamp | String | The end timestamp (in milliseconds) of the range between which you want the thread history (optional) |
-  | limit | String | The number of results to be returned (optional) |
+  | `api_key` | String | The private API key of your website |
+  | `room_id` | String/Array | This can be a string or an array. The string will contain the id of the room whose thread history you      want to retrieve and the array will contain the id of the rooms whose thread history you want to retrieve. |
+  | `start_timestamp` | String | The start timestamp (in milliseconds) of the range between which you want the thread history (optional)   |
+  | `end_timestamp` | String | The end timestamp (in milliseconds) of the range between which you want the thread history (optional) |
+  | `limit` | String | The number of results to be returned (optional) |
 
   **Response Attribute**
 
@@ -32,7 +32,7 @@ There are 3 different ways of retrieving thread history:
 
   | Attribute        | Type          | Description |
   | :------------- |:------------- | :-------------|
-  | Object | JSON | It would return thread history of that room or list of rooms with time, from_id, room_id, from_name, room_name,     message, message_id as properties. |
+  | `Object` | JSON | It would return thread history of that room or list of rooms with time, from_id, room_id, from_name, room_name,     message, message_id as properties. |
 
   **Curl Command**
 
@@ -92,12 +92,12 @@ There are 3 different ways of retrieving thread history:
 
   | Attribute        | Type          | Description |
   | :------------- |:------------- | :-------------|
-  | api_key | String | The private API key of your website |
-  | user_id | String/Array | This can be a string or an array. The string will contain the id of the user whose thread history you      want to retrieve and the array will contain the id of the users whose thread history you want to retrieve. |
-  | thread_filter | String | The value can be either user or room. If you want to get thread history of this user with all other users   choose user and if you want to get thread history of this user with all rooms choose room. Default value is user. (optional) |
-  | start_timestamp | String | The start timestamp (in milliseconds) of the range between which you want the thread history (optional)   |
-  | end_timestamp | String | The end timestamp (in milliseconds) of the range between which you want the thread history (optional) |
-  | limit | String | The number of results to be returned (optional) |
+  | `api_key` | String | The private API key of your website |
+  | `user_id` | String/Array | This can be a string or an array. The string will contain the id of the user whose thread history you      want to retrieve and the array will contain the id of the users whose thread history you want to retrieve. |
+  | `thread_filter` | String | The value can be either user or room. If you want to get thread history of this user with all other users   choose user and if you want to get thread history of this user with all rooms choose room. Default value is user. (optional) |
+  | `start_timestamp` | String | The start timestamp (in milliseconds) of the range between which you want the thread history (optional)   |
+  | `end_timestamp` | String | The end timestamp (in milliseconds) of the range between which you want the thread history (optional) |
+  | `limit` | String | The number of results to be returned (optional) |
 
   **Response Attribute**
 
@@ -105,7 +105,7 @@ There are 3 different ways of retrieving thread history:
 
   | Attribute        | Type          | Description |
   | :------------- |:------------- | :-------------|
-  | Object | JSON | It would contain thread history of that user or list of users with time, from_id, to_id, from_name, to_name,        message, message_id as properties if `thread_filter` parameter is user and if  `thread_filter` is room then the parameters would be   time, from_id, room_id, from_name, room_name, message and message_id. |
+  | `Object` | JSON | It would contain thread history of that user or list of users with time, from_id, to_id, from_name, to_name,        message, message_id as properties if `thread_filter` parameter is user and if  `thread_filter` is room then the parameters would      be time, from_id, room_id, from_name, room_name, message and message_id. |
 
   **Curl Command**
 
@@ -165,12 +165,12 @@ There are 3 different ways of retrieving thread history:
 
  | Attribute        | Type          | Description |
  | :------------- |:------------- | :-------------|
- | api_key | String | The private API key of your website |
- | from_id | String | The id of the first user. |
- | to_id | String |The id of the second user. |
- | start_timestamp | String | The start timestamp (in milliseconds) of the range between which you want the thread history (optional)  |
- | end_timestamp | String | The end timestamp (in milliseconds) of the range between which you want the thread history (optional) |
- | limit | String | The number of results to be returned (optional) |
+ | `api_key` | String | The private API key of your website |
+ | `from_id` | String | The id of the first user. |
+ | `to_id` | String |The id of the second user. |
+ | `start_timestamp` | String | The start timestamp (in milliseconds) of the range between which you want the thread history           (optional)  |
+ | `end_timestamp` | String | The end timestamp (in milliseconds) of the range between which you want the thread history (optional) |
+ | `limit` | String | The number of results to be returned (optional) |
 
  **Response Attribute**
 
@@ -178,7 +178,7 @@ There are 3 different ways of retrieving thread history:
 
  | Attribute        | Type          | Description |
  | :------------- |:------------- | :-------------|
- | Object | JSON | It would contain thread history between those users with time, from_id, to_id, from_name, to_name, message,         message_id as properties. |
+ | `Object` | JSON | It would contain thread history between those users with time, from_id, to_id, from_name, to_name, message,         message_id as properties. |
 
  **Curl Command**
 
