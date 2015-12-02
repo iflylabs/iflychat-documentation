@@ -12,7 +12,7 @@ Make a HTTP POST request to the following url:
 
 There are 3 different ways of retrieving thread history:
 
- **1. Retrieving thread history of a room or list of rooms ** 
+ 1. **Retrieving thread history of a room or list of rooms** 
 
 **Request Attribute**
 
