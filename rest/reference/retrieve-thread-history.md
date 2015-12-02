@@ -37,13 +37,13 @@ There are 3 different ways of retrieving thread history:
   **Curl Command**
 
   This the sample curl command required to make HTTP request:
-
+  
   ~~~
-
+  
   curl -H "Content-Type: application/json" -X POST https://api.iflychat.com/api/1.1/threads/get -d 
   "{\"api_key\": \"Wr4vpoJ_ET3lpBdX9E9TutUic4Dgb-gc7RGzuZvKqZgW5\",  \"room_id\": \"5\", \"start_timestamp\": \"1433142614\",    
   \"end_timestamp\": \"1433154346\", \"limit\": \"3\"}" 
-
+  
   ~~~
 
   **Response**
@@ -51,7 +51,7 @@ There are 3 different ways of retrieving thread history:
   This is the sample response:
 
   ~~~
-
+  
   [
     {
       "time": 1439793830,
@@ -81,7 +81,7 @@ There are 3 different ways of retrieving thread history:
       "message_id": "m_0-14358329043yvbs_c-5_1440491842827"
     },
   ]
-
+  
   ~~~
 
 2. Retrieving thread history of a user or list of users 
@@ -112,11 +112,11 @@ There are 3 different ways of retrieving thread history:
   This the sample curl command required to make HTTP request:
 
   ~~~
-
+  
   curl -H "Content-Type: application/json" -X POST https://api.iflychat.com/api/1.1/threads/get -d 
   "{\"api_key\": \"Wr4vpoJ_ET3lpBdX9E9TutUic4Dgb-gc7RGzuZvKqZgW5\", \"user_id[0]\": \"5\", \"user_id[1]\" : \"6\",
   \"start_timestamp\": \"1433142614\", \"end_timestamp\": \"1433154346\", \"limit\": \"3\", \"thread_filter\": \"room\"}" 
-
+  
   ~~~
 
   **Response**
@@ -124,7 +124,7 @@ There are 3 different ways of retrieving thread history:
   This is the sample response:
 
   ~~~
-
+  
   [
     {
       "time": 1433321114,
@@ -154,7 +154,7 @@ There are 3 different ways of retrieving thread history:
       "message_id": "m_6_c-0_1433404773434"
     }
   ]
-
+  
  ~~~
 
 3. Retrieving thread history between two users 
@@ -185,11 +185,11 @@ There are 3 different ways of retrieving thread history:
  This the sample curl command required to make HTTP request:
 
  ~~~
-
+ 
  curl -H "Content-Type: application/json" -X POST https://api.iflychat.com/api/1.1/threads/get -d 
  "{\"api_key\": \"Wr4vpoJ_ET3lpBdX9E9TutUic4Dgb-gc7RGzuZvKqZgW5\", \"from_id\": \"5\", \"to_id\" : \"6\",
  \"start_timestamp\": \"1433142614\", \"end_timestamp\": \"1433154346\", \"limit\": \"3\"}"
-
+ 
  ~~~
 
  **Response**
@@ -197,7 +197,7 @@ There are 3 different ways of retrieving thread history:
  This is the sample response:
 
  ~~~
-
+ 
  [
    {
      "time": 1433414966,
@@ -227,5 +227,5 @@ There are 3 different ways of retrieving thread history:
      "message_id": "m_5_6_1433758124808"
    }
  ]
-
+ 
  ~~~
