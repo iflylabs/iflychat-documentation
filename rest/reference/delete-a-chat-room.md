@@ -10,7 +10,7 @@ Make a HTTP POST request to the following url:
 | :------------- |:------------- |
 | `https://api.iflychat.com/api/1.1/room/{id}/delete` | POST |
 
-where `{id}` is the id room which you want to delete.
+where `{id}` is the id of the room which you want to delete.
 
 **Request Attribute**
 
