@@ -8,7 +8,7 @@ Make a HTTP POST request to the following url:
 
 | Url        | Type           |
 | :------------- |:------------- |
-| https://api.iflychat.com/api/1.1/user/unban-all | POST |
+| `https://api.iflychat.com/api/1.1/user/unban-all` | POST |
 
 
 **Request Attribute**
@@ -17,7 +17,7 @@ This HTTP request should include following parameters:
 
 | Attribute        | Type          | Description |
 | :------------- |:------------- | :-------------|
-| api_key | String | The private API key of your website |
+| `api_key` | String | The private API key of your website |
 
 **Response Attribute**
 
@@ -25,7 +25,7 @@ The response would be following:
 
 | Attribute        | Type          | Description |
 | :------------- |:------------- | :-------------|
-| Object | JSON | It would return {success: true}. |
+| `Object` | JSON | It would return {success: true}. |
 
 **Curl Command**
 
