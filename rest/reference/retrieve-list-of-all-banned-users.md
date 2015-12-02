@@ -1,6 +1,6 @@
 ###How to retrieve list of all Banned Users using iFlyChat API
 
-You can use iFlyChat API to programmatically kick any user from your website.
+You can use iFlyChat API to programmatically retrieve list of all users banned from your website.
 
 **Header Table**
 
