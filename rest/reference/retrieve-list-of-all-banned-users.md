@@ -8,7 +8,7 @@ Make a HTTP POST request to the following url:
 
 | Url        | Type           |
 | :------------- |:------------- |
-| https://api.iflychat.com/api/1.1/user/banned/list | POST |
+| https://api.iflychat.com/api/1.1/users/banned/list | POST |
 
 **Request Attribute**
 
