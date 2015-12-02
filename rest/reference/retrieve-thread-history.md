@@ -40,7 +40,9 @@ There are 3 different ways of retrieving thread history:
 
   ~~~
 
-  curl -H "Content-Type: application/json" -X POST https://api.iflychat.com/api/1.1/threads/get -d "{\"api_key\":                       \"Wr4vpoJ_ET3lpBdX9E9TutUic4Dgb-gc7RGzuZvKqZgW5\",  \"room_id\": \"5\", \"start_timestamp\": \"1433142614\", \"end_timestamp\":       \"1433154346\", \"limit\": \"3\"}" 
+  curl -H "Content-Type: application/json" -X POST https://api.iflychat.com/api/1.1/threads/get -d 
+  "{\"api_key\": \"Wr4vpoJ_ET3lpBdX9E9TutUic4Dgb-gc7RGzuZvKqZgW5\",  \"room_id\": \"5\", \"start_timestamp\": \"1433142614\",    
+  \"end_timestamp\":       \"1433154346\", \"limit\": \"3\"}" 
 
   ~~~
 
@@ -111,7 +113,9 @@ There are 3 different ways of retrieving thread history:
 
   ~~~
 
-  curl -H "Content-Type: application/json" -X POST https://api.iflychat.com/api/1.1/threads/get -d "{\"api_key\":                       \"Wr4vpoJ_ET3lpBdX9E9TutUic4Dgb-gc7RGzuZvKqZgW5\",  \"user_id[0]\": \"5\", \"user_id[1]\" : \"6\", \"start_timestamp\":               \"1433142614\", \"end_timestamp\": \"1433154346\", \"limit\": \"3\", \"thread_filter\": \"room\"}" 
+  curl -H "Content-Type: application/json" -X POST https://api.iflychat.com/api/1.1/threads/get -d 
+  "{\"api_key\": \"Wr4vpoJ_ET3lpBdX9E9TutUic4Dgb-gc7RGzuZvKqZgW5\",  \"user_id[0]\": \"5\", \"user_id[1]\" : \"6\",
+  \"start_timestamp\": \"1433142614\", \"end_timestamp\": \"1433154346\", \"limit\": \"3\", \"thread_filter\": \"room\"}" 
 
   ~~~
 
