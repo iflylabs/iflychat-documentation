@@ -152,3 +152,74 @@ This is the sample response:
 ]
 
 ~~~
+
+3. Retrieving thread history between two users
+
+**Request Attribute**
+
+This HTTP request should include following parameters:
+
+| Attribute        | Type          | Description |
+| :------------- |:------------- | :-------------|
+| api_key | String | The private API key of your website |
+| from_id | String | The id of the first user. |
+| to_id | String |The id of the second user. |
+| start_timestamp | String | The start timestamp (in milliseconds) of the range between which you want the thread history (optional) |
+| end_timestamp | String | The end timestamp (in milliseconds) of the range between which you want the thread history (optional) |
+| limit | String | The number of results to be returned (optional) |
+
+**Response Attribute**
+
+The response would be following:
+
+| Attribute        | Type          | Description |
+| :------------- |:------------- | :-------------|
+| Object | JSON | It would contain thread history between those users with time, from_id, to_id, from_name, to_name, message, message_id as properties. |
+
+**Curl Command**
+
+This the sample curl command required to make HTTP request:
+
+~~~
+
+curl -H "Content-Type: application/json" -X POST https://api.iflychat.com/api/1.1/threads/get -d "{\"api_key\":\"Wr4vpoJ_ET3lpBdX9E9TutUic4Dgb-gc7RGzuZvKqZgW5\", \"from_id\": \"5\", \"to_id\": \"6\", \"start_timestamp\": \"1433142614\", \"end_timestamp\": \"1433154346\", \"limit\": \"3\"}"
+
+~~~
+
+**Response**
+
+This is the sample response:
+
+~~~
+
+[
+  {
+    "time": 1433414966,
+    "from_id": "5",
+    "to_id": "6",
+    "from_name": "anmol",
+    "to_name": "vivek",
+    "message": "hey!, how are you?",
+    "message_id": "m_5_6_1433414961087"
+  },
+  {
+    "time": 1433758067,
+    "from_id": "6",
+    "to_id": "5",
+    "from_name": "vivek",
+    "to_name": "anmol",
+    "message": "I'm fine. What about you..?",
+    "message_id": "m_5_6_1433758064444"
+  },
+  {
+    "time": 1433758127,
+    "from_id": "5",
+    "to_id": "6",
+    "from_name": "anmol",
+    "to_name": "vivek",
+    "message": "Yeah, i'm fine too.",
+    "message_id": "m_5_6_1433758124808"
+  }
+]
+
+~~~
