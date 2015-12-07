@@ -8,44 +8,51 @@
 4. Copy and paste `iFlyChatLibrary.jar` file in the `libs` folder.
 5. Right click on `iFlyChatLibrary.jar` file in Android Studio and click on `Add as Library`.
 6. To start the chat, we need to initialize the activity. In your activity’s `onCreate()` method :
-   * Create and Initialize a `LocalBroadcastManager` object.
-   ~~~ {.language-java}
-   LocalBroadcastManager bManager = LocalBroadcastManager.getInstance(this);
-   ~~~
-   * Call `setiFlyChatContext(Context)` method of `iFlyChatUtilities` class in iFlyChatLibrary and give your application context object to this class.
-   ~~~ {.language-java}
-   iFlyChatUtilities.setiFlyChatContext(getApplicationContext());
-   ~~~
-   * If Session Key is not available then, Create and initialize the `iFlyChatUserSession` object with your username and password.
-   ~~~ {.language-java}
-   iFlyChatUserSession userSession = new iFlyChatUserSession("your_username", "your_password");
-   ~~~
-   * If Session Key is available then, Create and initialize the `iFlyChatUserSession` object with your username, password and session key.
-   ~~~ {.language-java}
-   iFlyChatUserSession userSession = new iFlyChatUserSession("your_username", "your_password", “your_sessionKey”);
-   ~~~
+  * Create and Initialize a `LocalBroadcastManager` object.
 
+      ~~~ {.language-java}
+      LocalBroadcastManager bManager = LocalBroadcastManager.getInstance(this);
+      ~~~
+  * Call `setiFlyChatContext(Context)` method of `iFlyChatUtilities` class in iFlyChatLibrary and give your application context object to this class.
 
-Create and initialize the `iFlyChatConfig` object. Use the `serverHost` and `authUrl` provided by iFlyChat.
-~~~ {.language-java}
-iFlyChatConfig config = new iFlyChatConfig(serverHost, authUrl, isHttps);
-~~~
-   - Create and initialize the `iFlyChatUserAuthService` object.
-   ~~~ {.language-java}
-   iFlyChatUserAuthService authService = new iFlyChatUserAuthService(config, userSession);
-   ~~~
-   - Get sessionKey from `userSession` object.
-   ~~~ {.language-java}
-   String sessionKey = userSession.getSessionKey();
-   ~~~
-   - Create and initialize the `iFlyChatService` object.
-   ~~~ {.language-java}
-   iFlyChatService service = new iFlyChatService(userSession, config, authService);
-   ~~~
-   - Connect the chat using `sessionKey`.
-   ~~~ {.language-java}
-   service.connectChat(sessionKey);
-   ~~~
+      ~~~ {.language-java}
+      iFlyChatUtilities.setiFlyChatContext(getApplicationContext());
+      ~~~
+  * If Session Key is not available then, Create and initialize the `iFlyChatUserSession` object with your username and password.
+
+      ~~~ {.language-java}
+      iFlyChatUserSession userSession = new iFlyChatUserSession("your_username", "your_password");
+      ~~~
+  * If Session Key is available then, Create and initialize the `iFlyChatUserSession` object with your username, password and session key.
+
+      ~~~ {.language-java}
+      iFlyChatUserSession userSession = new iFlyChatUserSession("your_username", "your_password", “your_sessionKey”);
+      ~~~
+  * Create and initialize the `iFlyChatConfig` object. Use the `serverHost` and `authUrl` provided by iFlyChat.
+
+      ~~~ {.language-java}
+      iFlyChatConfig config = new iFlyChatConfig(serverHost, authUrl, isHttps);
+      ~~~
+  * Create and initialize the `iFlyChatUserAuthService` object.
+
+      ~~~ {.language-java}
+      iFlyChatUserAuthService authService = new iFlyChatUserAuthService(config, userSession);
+      ~~~
+  * Get sessionKey from `userSession` object.
+
+      ~~~ {.language-java}
+      String sessionKey = userSession.getSessionKey();
+      ~~~
+  * Create and initialize the `iFlyChatService` object.
+
+      ~~~ {.language-java}
+      iFlyChatService service = new iFlyChatService(userSession, config, authService);
+      ~~~
+  * Connect the chat using `sessionKey`.
+
+      ~~~ {.language-java}
+      service.connectChat(sessionKey);
+      ~~~
 
 1. In your activity’s `onStart()` method :
    - Create and Initialize a `IntentFilter` object.
