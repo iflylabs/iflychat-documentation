@@ -9,14 +9,25 @@ service.getUserThreadHistory(fromUserId, toUserName, messageId);
 ~~~  
 After calling this function, iFlyChat servers will send the thread history for the user. After processing the message, iFlyChatLibrary will send an intent with intent action named `iFlyChat.onUserThreadHistory`.
 
-To listen this intent and receive this event, the user needs to add receiver to the application and retrieve the `LinkedHashMap<String, JSONArray>` object from the intent using `threadHistory` string. One can get `JSONArray` from `LinkedHashMap` object using the current user userId string. This `JSONArray` contains `iFlyChatMessage` objects from thread history.
+To listen and receive this intent, the user needs to add receiver to the application. Then user can retrieve the `userId` string using `forUserId` String and `<LinkedHashMap<String,iFlyChatMessage>` object from the intent using `threadHistoryMap` string. This `LinkedHashMap<String, iFlyChatMessage>` contains `messageId` string as String object and `iFlyChatMessage` objects from thread history.
 
 ~~~ {.language-java}
-LinkedHashMap<String, JSONArray> threadHistoryMap = new LinkedHashMap<>();
-threadHistoryMap = (LinkedHashMap<String, JSONArray>) intent.getSerializableExtra("threadHistory");
-JSONArray msgObjectArray = threadHistoryMap.get(USERID);
+if (intent.getAction().equals("iFlyChat.onUserThreadHistory")){
+    String userId = intent.getStringExtra("forUserId");
+
+    LinkedHashMap<String, iFlyChatMessage> threadHistoryMessageMap
+    = (LinkedHashMap<String, iFlyChatMessage>) intent.getSerializableExtra("threadHistoryMap");
+        
+        if(threadHistoryMessageMap!=null && threadHistoryMessageMap.size()>0){
+            
+            for (Map.Entry<String, iFlyChatMessage> entry : threadHistoryMessageMap.entrySet()) {
+                iFlyChatMessage message = entry.getValue();
+            }
+
+        }
+}
 ~~~  
-NOTE: If the thread history is empty, iFlyChatLibrary will send an intent with the `LinkedHashMap` object, which contains an empty `JSONArray`.
+NOTE: If the thread history is empty, iFlyChatLibrary will send an intent with an `userId` string, which can be retrieve using `forUserId` string and an empty `LinkedHashMap<String, iFlyChatMessage>` object, which can be retrieve using `threadHistoryMap` string.
 
 **Get message history for rooms**
 
@@ -27,11 +38,22 @@ service.getRoomThreadHistory(fromRoomId, toRoomName, messageId);
 ~~~  
 After calling this function, iFlyChat servers will send the thread history for the room. After processing the message, iFlyChatLibrary will send an intent with intent action named `iFlyChat.onRoomThreadHistory`.
 
-To listen this intent and receive this event, the user needs to add receiver to the application and retrieve the `LinkedHashMap<String, JSONArray>` object from the intent using `threadHistory` string. One can get `JSONArray` from `LinkedHashMap` object using the roomId string. This `JSONArray` contains `iFlyChatMessage` objects from that room thread history.
+To listen and receive this intent, the user needs to add receiver to the application. Then user can retrieve the `roomId` string using `forRoomId` String and `<LinkedHashMap<String,iFlyChatMessage>` object from the intent using `threadHistoryMap` string. This `LinkedHashMap<String, iFlyChatMessage>` contains `messageId` string as String object and `iFlyChatMessage` objects from thread history.
 
 ~~~ {.language-java}
-LinkedHashMap<String, JSONArray> threadHistoryMap = new LinkedHashMap<>();
-threadHistoryMap = (LinkedHashMap<String, JSONArray>) intent.getSerializableExtra("threadHistory");
-JSONArray msgObjectArray = threadHistoryMap.get(ROOMID);
+if (intent.getAction().equals("iFlyChat.onRoomThreadHistory")){
+    String roomId = intent.getStringExtra("forRoomId");
+
+    LinkedHashMap<String, iFlyChatMessage> threadHistoryMessageMap 
+    = (LinkedHashMap<String, iFlyChatMessage>) intent.getSerializableExtra("threadHistoryMap");
+    
+        if(threadHistoryMessageMap!=null && threadHistoryMessageMap.size()>0){
+    
+            for (Map.Entry<String, iFlyChatMessage> entry : threadHistoryMessageMap.entrySet()) {
+                iFlyChatMessage message = entry.getValue();
+            }
+
+        }
+}
 ~~~  
-NOTE: If the thread history is empty, iFlyChatLibrary will send an intent with the `LinkedHashMap` object, which contains an empty `JSONArray`.
+NOTE: If the thread history is empty, iFlyChatLibrary will send an intent with an `roomId` string, which can be retrieve using `forRoomId` string and an empty `LinkedHashMap<String, iFlyChatMessage>` object, which can be retrieve using `threadHistoryMap` string.
