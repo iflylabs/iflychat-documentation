@@ -1,4 +1,5 @@
-iFlyChat JavaScript SDK fires an event named 'message-send' whenever a new message is sent by the current user. You may bind to this event in following manner:
+iFlyChat JavaScript SDK fires an event named '**message-send**' whenever a new message is sent by the current user. You may bind to this event in following manner:
+
 ~~~
 iflychat.on('message-send', function(message) {
   

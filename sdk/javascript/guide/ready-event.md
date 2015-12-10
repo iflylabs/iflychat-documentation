@@ -1,4 +1,4 @@
-iFlyChat JavaScript SDK fires an event named 'ready' when our app is ready. You may write your customisation code inside this event. You may bind to this event in following manner:
+iFlyChat JavaScript SDK fires an event named '**ready**' when our app is ready. You may write your customisation code inside this event. You may bind to this event in following manner:
 ~~~
 iflychat.on('ready', function(data) {
   
