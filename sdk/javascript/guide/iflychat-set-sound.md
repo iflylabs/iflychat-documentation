@@ -10,6 +10,7 @@ iflychat.setSound({
 This function takes a JS object as paramter which should have following properties:
 
 * sound
+
 Possible values of status are :
 
 * true - Sound On/ Unmute
