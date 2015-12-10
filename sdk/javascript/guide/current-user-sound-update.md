@@ -11,6 +11,7 @@ Here message is a JS object with following properties:
 
 * id
 * sound
+
 Possible values of sound:
 
 * true - Sound is on/ Unmute
