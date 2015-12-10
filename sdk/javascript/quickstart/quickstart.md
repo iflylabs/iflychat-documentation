@@ -30,4 +30,4 @@ window.iflychatAsyncInit = function() {
 
 It is fired when chat starts initialising. 
 
-Note that you should be using a [premium plan!](https://iflychat.com/pricing) in order to be able to use this feature.
+Note that you should be using a [premium plan](https://iflychat.com/pricing) in order to be able to use this feature.
