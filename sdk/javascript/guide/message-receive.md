@@ -10,9 +10,9 @@ iflychat.on('message-receive', function(message) {
 
 Here message is a JS object with following properties:
 
-*fromId
-*fromName
-*toId
-*toName
-*message
-*messageId
+* fromId
+* fromName
+* toId
+* toName
+* message
+* messageId
