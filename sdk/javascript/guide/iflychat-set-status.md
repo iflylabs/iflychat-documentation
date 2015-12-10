@@ -10,6 +10,7 @@ iflychat.setStatus({
 This function takes a JS object as paramter which should have following properties:
 
 * status
+
 Possible values of status are :
 
 * '1' - Available 
