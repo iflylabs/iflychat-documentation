@@ -11,6 +11,7 @@ Here message is a JS object with following properties:
 
 * id
 * status
+
 Possible values of status:
 
 * '1' - Available
