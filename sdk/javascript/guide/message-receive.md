@@ -1,4 +1,4 @@
-iFlyChat JavaScript SDK fires an event named 'message-receive' whenever a new message is received. You may bind to this event in following manner:
+iFlyChat JavaScript SDK fires an event named '**message-receive**' whenever a new message is received. You may bind to this event in following manner:
 
 ~~~
 iflychat.on('message-receive', function(message) {
