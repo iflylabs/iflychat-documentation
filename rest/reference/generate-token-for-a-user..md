@@ -20,7 +20,7 @@ This HTTP request should include following parameters:
 | `user_id` | String | The id of the user |
 | `user_name` | String | The name of the user |
 | `user_profile_url` | String | The profile link of the user (optional) |
-| 'user_avatar_url` | String | The avatar URL of the user (optional) |
+| `user_avatar_url` | String | The avatar URL of the user (optional) |
 | `user_status` | String | The status of the user (optional) |
 | `user_role` | Array | The roles array. It should contain all the roles of the user (as an associative array) (optional) |
 | `user_groups` | Array | The group array. It should contain all the groups of the user (as an associative array) (optional) |
