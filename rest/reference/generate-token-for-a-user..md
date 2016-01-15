@@ -32,7 +32,7 @@ The response would be following:
 
 | Attribute        | Type          | Description |
 | :------------- |:------------- | :-------------|
-| `Object` | JSON | It would contain the key of the user and tokenValidFor. |
+| `Object` | JSON | It would contain the key and expires_in. |
 
 **Curl Command**
 
@@ -50,7 +50,7 @@ This is the sample response:
 
 ~~~
 
-{"key":"TKT5GPrztRMTPMTPQWaf2Ou6LFEHVBDi1xtCkH2xBSdEV8gnZcy3eFoLp114527666063106ZeQfjRCWWVlXlWJbWuivoJvJznMDiT6ltp9ACKlPGWjhhqPHsH6xWIMn","tokenValidFor":"20 hours 12 minutes"}
+{"key":"TKT5GPrztRMTPMTPQWaf2Ou6LFEHVBDi1xtCkH2xBSdEV8gnZcy3eFoLp114527666063106ZeQfjRCWWVlXlWJbWuivoJvJznMDiT6ltp9ACKlPGWjhhqPHsH6xWIMn","expires_in ":"67770"}
 
 ~~~
 
