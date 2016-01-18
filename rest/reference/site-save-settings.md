@@ -1,6 +1,6 @@
-###How to Generate Token For a User using iFlyChat API
+###How to Save site settings using iFlyChat API
 
-You can use iFlyChat API to programmatically generate token for a user.
+You can use iFlyChat API to programmatically to save settings of site.
 
 **Header Table**
 
