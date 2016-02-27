@@ -16,7 +16,7 @@ Apart from this, we also provide a WordPress filter which enables you to use ava
 You may use this filter in the following manner:
 
 ~~~
-function my_custom_user_avatar_url_filter($uid){
+function my_custom_user_avatar_url_filter(){
 
   /** Get current user information **/
   global $current_user;
@@ -25,7 +25,7 @@ function my_custom_user_avatar_url_filter($uid){
   /** Get avatar of the current user with the help of your custom function
    *   it should return the user avatar url
   **/
-	$user_avatar_url = get_custom_avatar_url($current->ID);
+  $user_avatar_url = get_custom_avatar_url($current->ID);
 
   return $user_avatar_url;
 
