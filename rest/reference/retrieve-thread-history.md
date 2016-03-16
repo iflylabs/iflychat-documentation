@@ -25,7 +25,7 @@ There are 3 different ways of retrieving thread history:
     | `start_timestamp` | String | The start timestamp (in milliseconds) of the range between which you want the thread history (optional) |
     | `end_timestamp` | String | The end timestamp (in milliseconds) of the range between which you want the thread history (optional) |
     | `limit` | String | The number of results to be returned (optional) |
-    | `timezone_offset` | String | The difference in seconds between UTC and your local time. The value is negative if the local timezone is behind UTC and positive if it is ahead. For example, if your time zone is UTC+5:30 hours (Indian Standard Time), the value would be 19800. The default value is 0 (optional)|
+    | `timezone_offset` | String | The difference in milliseconds between UTC and your local time. The value should negative if the local timezone is behind UTC and positive if it is ahead. For example, if your time zone is UTC+5:30 hours (Indian Standard Time), the value would be 19800000(5.5*60*60*1000). The default value is 0 (optional)|
 
     **Response Attribute**
 
