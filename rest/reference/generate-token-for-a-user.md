@@ -22,9 +22,9 @@ This HTTP request should include following parameters:
 | `user_profile_url` | String | The profile link of the user (optional) |
 | `user_avatar_url` | String | The avatar URL of the user (optional) |
 | `user_status` | String | The status of the user (optional) |
-| `user_role` | Array | The roles array. It should contain all the roles of the user (as an associative array) (optional) |
+| `user_roles` | Array | The roles array. It should contain all the roles of the user (as an associative array) (optional) |
 | `user_groups` | Array | The group array. It should contain all the groups of the user (as an associative array) (optional) |
-| `user-roster_list` | Array | The contact list of the user (optional) |
+| `user_roster_list` | Array | The contact list of the user (optional) |
 
 **Response Attribute**
 
