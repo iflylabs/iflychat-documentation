@@ -3,6 +3,7 @@ To implement wordpress action hooks in your module, you just need to add the fil
 
 **Note:** These hooks are supported from version >= **7.x-2.5**
 
+**1: my_custom_get_username -** Assigns a username to a given user.
 
 ```php
 /**
@@ -16,6 +17,7 @@ function my_custom_get_username($user_name){
 add_filter('iflychat_get_username_filter','my_custom_get_username',10,2);
 ```
 
+**2: my_custom_get_user_avatar_url() -** Assigns a avatar url to the given user.
 
 ```php
 /**
@@ -27,6 +29,7 @@ function iflychat_get_user_avatar_url(){
 }
 add_filter('iflychat_get_user_avatar_url_filter','my_custom_get_user_avatar_url');
 ```
+**3: my_custom_get_profile_url() -** Assigns a profile url to a given user.
 
 ```php
 /**
@@ -39,6 +42,7 @@ function my_custom_get_profile_url(){
 add_filter('my_custom_get_user_profile_url_filter','iflychat_get_profile_url');
 ```
 
+**4: my_custom_get_user_roles() -** Assigns roles to a given user.
 
 ```php
 /**
@@ -58,6 +62,7 @@ function iflychat_get_user_roles($roles){
 add_filter('iflychat_get_user_roles_filter','iflychat_get_user_roles');
 ```
 
+**5: my_custom_groups_filter() -** Assigns a group to a given user.
 
 ```php
 /**
@@ -77,6 +82,7 @@ add_filter('iflychat_get_user_roles_filter','iflychat_get_user_roles');
  add_filter('iflychat_get_user_groups_filter','my_custom_groups_filter');
 ```
 
+**6: my_custom_friends_filter() -** Assigns a relationship to a given user.
 
 ```php
 /**
