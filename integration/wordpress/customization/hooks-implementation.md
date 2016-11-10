@@ -103,7 +103,7 @@ function my_custom_get_friends($friends,$uid){
 add_filter('iflychat_get_user_friends_filter', 'my_custom_get_friends');
 ```
 
-**6: iflychat_check_access_filter() -** Display chat to a limited set of users.
+**7: iflychat_check_access_filter() -** Display chat to a limited set of users.
 ```php
 /**
  * Implements my_custom_filter().
