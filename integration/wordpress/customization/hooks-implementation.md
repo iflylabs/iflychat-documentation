@@ -1,5 +1,5 @@
 ## iFlyChat Filters Implementation
-To implement wordpress filter in your module, you just need to add the filter definition of these filter in your main plugin file. Sample implementations are given below:
+To implement Wordpress filter in your module, you just need to add the filter definition of these filter in your main plugin file. Sample implementations are given below:
 
 **Note:** These filters are supported from version >= **4.2.5**
 
