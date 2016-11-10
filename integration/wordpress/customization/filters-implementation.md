@@ -92,7 +92,7 @@ add_filter('iflychat_get_user_roles_filter','my_custom_get_user_roles',10,2);
 
 ```php
 /**
- * Implements my_custom_friends().
+ * Implements my_custom_get_friends().
  * @params $friends array 
  * @params $uid string 
  */
