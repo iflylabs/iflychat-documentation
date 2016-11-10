@@ -26,7 +26,7 @@ add_filter('iflychat_get_username_filter','my_custom_get_username',10,2);
  * @params $user_avatar_url string 
  * @params $uid string 
  */
-function iflychat_get_user_avatar_url($user_avatar_url,$uid){
+function my_custom_get_user_avatar_url($user_avatar_url,$uid){
   $user_avatar_url = 'http://sample-avatar-url';
   return $user_avatar_url;
 }
@@ -100,7 +100,7 @@ function my_custom_get_friends($friends,$uid){
   $friends = ['1','2','3'];    //Id's of friends
   return (array)$friends;
 }
-add_filter('iflychat_get_user_friends_filter', 'my_custom_get_friends');
+add_filter('iflychat_get_user_friends_filter', 'my_custom_get_friends',10,2);
 ```
 
 **7: iflychat_check_access_filter() -** Display chat to a limited set of users.
