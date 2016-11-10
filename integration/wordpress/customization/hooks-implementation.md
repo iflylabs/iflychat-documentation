@@ -23,6 +23,8 @@ add_filter('iflychat_get_username_filter','my_custom_get_username',10,2);
 ```php
 /**
  * Implements my_custom_get_user_avatar_url()
+ * @params $user_avatar_url string 
+ * @params $uid string 
  */
 function iflychat_get_user_avatar_url($user_avatar_url,$uid){
   $user_avatar_url = 'http://sample-avatar-url';
