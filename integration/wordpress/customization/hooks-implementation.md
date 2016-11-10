@@ -107,9 +107,10 @@ add_filter('iflychat_get_user_friends_filter', 'my_custom_get_friends');
 ```php
 /**
  * Implements my_custom_filter().
- * @params $access boolean 
+ * @params $access boolean
+ * @params $uid string 
  */
-function my_custom_filter($access) {
+function my_custom_filter($access,$uid) {
   $access = true;
   /** Get current user information **/
   global $current_user;
@@ -117,7 +118,7 @@ function my_custom_filter($access) {
   /** Return $access as true or false based on your custom code */ 
   return $access;
 }
-add_filter('iflychat_check_access_filter', 'my_custom_filter');
+add_filter('iflychat_check_access_filter', 'my_custom_filter',10,2);
 ```
 
 For reference - https://developer.wordpress.org/reference/functions/add_filter/
