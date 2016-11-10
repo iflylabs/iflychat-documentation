@@ -1,7 +1,7 @@
-## iFlyChat Hooks Implementation
+## iFlyChat Filters Implementation
 To implement wordpress filter in your module, you just need to add the filter definition of these filter in your main plugin file. Sample implementations are given below:
 
-**Note:** These filters are supported from version >= **7.x-2.5**
+**Note:** These filters are supported from version >= **4.2.5**
 
 **1: iflychat_get_username_filter -** Assigns a username to a given user.
 
