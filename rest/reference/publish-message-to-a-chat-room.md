@@ -41,7 +41,7 @@ This the sample curl command required to make HTTP request:
 
 ~~~
 
-curl -F "api_key=Wr4vpoJ_ET3lpBdX9E9TutUic4Dgb-gc7RGzuZvKqZgW55" -F "uid=7" -F "name=test1" -F "picture_url=https://api.iflychat.com/sites/default/files/styles/thumbnail/public/pictures/picture-5-1427286796.jpg?itok=T_MyAL4_" -F "profile_url=javascript:void(0)" -F "message=HELLO" -F "color=#222" -F "roles[authenticated]=authenticated" -X POST "https://api.iflychat.com/api/1.1/user/0/publish"
+curl -F "api_key=Wr4vpoJ_ET3lpBdX9E9TutUic4Dgb-gc7RGzuZvKqZgW55" -F "uid=7" -F "name=test1" -F "picture_url=https://api.iflychat.com/sites/default/files/styles/thumbnail/public/pictures/picture-5-1427286796.jpg?itok=T_MyAL4_" -F "profile_url=javascript:void(0)" -F "message=HELLO" -F "color=#222" -F "roles[authenticated]=authenticated" -X POST "https://api.iflychat.com/api/1.1/room/0/publish"
 
 ~~~
 
