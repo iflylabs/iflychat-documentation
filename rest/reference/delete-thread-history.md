@@ -10,7 +10,7 @@ Make a HTTP POST request to the following url:
 | :------------- |:------------- |
 | `https://api.iflychat.com/api/1.1/threads/delete` | POST |
 
-There are 2 different ways of retrieving thread history:
+There are 2 different ways of deleting thread history:
 
 1. Deleting thread history of a room
 
