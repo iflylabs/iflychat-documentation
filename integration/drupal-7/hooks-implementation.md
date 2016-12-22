@@ -70,7 +70,7 @@ function {your_module_name}_drupalchat_get_groups_alter(&$user_groups, $id){
     if($id % 2){
         $user_groups['sample-group-a'] = 'Sample-Group-Name-A'; // all users with odd user id belongs to this group.
     }else{
-        $roles['sample-group-b'] = 'Sample-Group-Name-B'; // all users with even user id belongs to this group.
+        $user_groups['sample-group-b'] = 'Sample-Group-Name-B'; // all users with even user id belongs to this group.
     }
 }
 ```
