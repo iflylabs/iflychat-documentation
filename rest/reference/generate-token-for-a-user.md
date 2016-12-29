@@ -25,9 +25,9 @@ This HTTP request should include following parameters:
 | `user_avatar_url` | String | The avatar URL of the user (optional) |
 | `user_status` | String | The status of the user (optional) |
 | `user_list_filter` | String | The filtering parameter for showing online users (default = "all") (optional) |
-| `user_roles` | Object | The roles array. It should contain all the roles of the user (as an associative array) (optional) |
-| `user_site_roles` | Object | The user site roles array. It should contain all the roles of your website (as an associative array) (optional) |
-| `user_groups` | Object | The group array. It should contain all the groups of the user (as an associative array) (optional) |
+| `user_roles` | Object | The roles object. It should contain all the roles of the user (as an json object) (optional) |
+| `user_site_roles` | Object | The user site roles object. It should contain all the roles of your website (as an json obejct) (optional) |
+| `user_groups` | Object | The group object. It should contain all the groups of the user (as an json object) (optional) |
 | `user_relationships` | Object | The contact list of the user (optional) |
 
 **Response Attribute**
