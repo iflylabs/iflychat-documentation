@@ -44,7 +44,7 @@ This the sample curl command required to make HTTP request:
 
 ~~~
 
-curl -H "Content-Type: application/json" -X POST -d '{"api_key":"Wr4vpoJ_ET3lpBdX9E9TutUic4Dgb-gc7RGzuZvKqZgW5","app_id":"41357620-760b-4495-ba78-6ebddbd14f06","user_name":"ee1231efdghje1","user_id":"1"}' https://api.iflychat.com/api/1.1/token/generate
+curl -H "Content-Type: application/json" -X POST -d '{"api_key":"Wr4vpoJ_ET3lpBdX9E9TutUic4Dgb-gc7RGzuZvKqZgW5","app_id":"41357620-760b-4495-ba78-6ebddbd14f06","user_name":"test_user","user_id":"1"}' https://api.iflychat.com/api/1.1/token/generate
 
 ~~~
 
