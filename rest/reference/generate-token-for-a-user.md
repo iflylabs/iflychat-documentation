@@ -17,14 +17,18 @@ This HTTP request should include following parameters:
 | Attribute        | Type          | Description |
 | :------------- |:------------- | :-------------|
 | `api_key` | String | The private API key of your website |
-| `user_id` | String | The id of the user |
-| `user_name` | String | The name of the user |
+| `app_id` | String | The public APP ID of your website |
+| `user_id` | String (< 255 characters) | The id of the user |
+| `user_name` | String (< 255 characters) | The name of the user |
+| `chat_role` | String | The chat role of the user. Possible values - {'admin', 'moderator, 'participant', 'viewer'} (optional) |
 | `user_profile_url` | String | The profile link of the user (optional) |
 | `user_avatar_url` | String | The avatar URL of the user (optional) |
 | `user_status` | String | The status of the user (optional) |
-| `user_roles` | Array | The roles array. It should contain all the roles of the user (as an associative array) (optional) |
-| `user_groups` | Array | The group array. It should contain all the groups of the user (as an associative array) (optional) |
-| `user_roster_list` | Array | The contact list of the user (optional) |
+| `user_list_filter` | String | The filtering parameter for showing online users (default = "all") (optional) |
+| `user_roles` | Object | The roles object. It should contain all the roles of the user (as an json object) (optional) |
+| `user_site_roles` | Object | The user site roles object. It should contain all the roles of your website (as an json obejct) (optional) |
+| `user_groups` | Object | The group object. It should contain all the groups of the user (as an json object) (optional) |
+| `user_relationships` | Object | The contact list of the user (optional) |
 
 **Response Attribute**
 
@@ -40,7 +44,7 @@ This the sample curl command required to make HTTP request:
 
 ~~~
 
-curl -H "Content-Type: application/json" -X POST https://api.iflychat.com/api/1.1/token/generate -d "{\"api_key\":\"Wr4vpoJ_ET3lpBdX9E9TutUic4Dgb-gc7RGzuZvKqZgW5\", \"user_id\":\"3\", \"user_name\":"\guest123\"}"
+curl -H "Content-Type: application/json" -X POST -d '{"api_key":"Wr4vpoJ_ET3lpBdX9E9TutUic4Dgb-gc7RGzuZvKqZgW5","app_id":"41357620-760b-4495-ba78-6ebddbd14f06","user_name":"test_user","user_id":"1"}' https://api.iflychat.com/api/1.1/token/generate
 
 ~~~
 
