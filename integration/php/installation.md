@@ -22,10 +22,13 @@ Or you can clone or download the library files.
 
 **Step 3:** Use these credentials in your main php(index) file to create a new ```iFlyChat``` instance.
 ```php
+
+use Iflylabs\iFlyChat;
+
 const APP_ID = 'YOUR_APP_ID';
 const API_KEY = 'YOUR_API_KEY';
 
-$iflychat = new Iflylabs\iFlyChat(APP_ID, API_KEY);
+$iflychat = new iFlyChat(APP_ID, API_KEY);
 ```
 
 **Step 4(optional):** In case, you want to create a user for the chat, you just need to call the setUser() function with $user array as a parameter. 
