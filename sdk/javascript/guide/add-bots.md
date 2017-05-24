@@ -13,7 +13,7 @@ iFlyChat JavaScript SDK has a function named '**addBots**' which can be used to 
     };
 ~~~
 
-This function takes an Array of objects as parameter where each object should has following properties:
+This function takes an Array of objects as parameter where each object should have following properties:
 
 * name - Name of the bot you want to assign.
 * avatar - Avatar url.
