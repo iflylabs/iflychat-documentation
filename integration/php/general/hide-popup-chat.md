@@ -1,4 +1,4 @@
-###How to hide popup chat on a PHP page
+### How to hide popup chat on a PHP page
 
 You may hide the popup chat on a PHP page as explained below:
 
@@ -41,6 +41,6 @@ $iflychat = new iFlyChat(APP_ID, API_KEY, $settings);
 </html>
 ```
 
-That's it. Now the popup chat won't appear on the PHP page. 
+That's it. Now the popup chat won't appear on the PHP page.
 
 *Note*: Please note that in order to render embed version of the chat you would need to add embed code separately.

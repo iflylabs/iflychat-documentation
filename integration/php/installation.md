@@ -1,6 +1,6 @@
 ## How to integrate iFlyChat with any PHP based website.
 
-**Step 1:**  You can get the iFlyChat PHP library via a composer package called iflychat-php. See https://packagist.org/packages/iflylabs/iflychat-php
+**Step 1:**  You can get the iFlyChat PHP library via a composer package called iflychat-php. See [https://packagist.org/packages/iflylabs/iflychat-php](https://packagist.org/packages/iflylabs/iflychat-php).
 
 ```
 $ composer require iflylabs/iflychat-php
@@ -31,13 +31,13 @@ const API_KEY = 'YOUR_API_KEY';
 $iflychat = new iFlyChat(APP_ID, API_KEY);
 ```
 
-**Step 4(optional):** In case, you want to create a user for the chat, you just need to call the setUser() function with $user array as a parameter. 
+**Step 4(optional):** In case, you want to create a user for the chat, you just need to call the setUser() function with $user array as a parameter.
 
 Example.
 ```php
 $user = array(
   'user_name' => 'testUser', // string(required)
-  'user_id' => '2', string (required)
+  'user_id' => '2', // string (required)
   'is_admin' => FALSE, // boolean (optional)
   'user_avatar_url' => 'user-avatar-link', // string (optional)
   'user_profile_url' => 'user-profile-link', // string (optional)
